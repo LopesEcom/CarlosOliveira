@@ -1,6 +1,7 @@
 'use client'
 
 import { Search } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo, useState, useTransition } from 'react'
 
@@ -148,8 +149,9 @@ function Linha({
       <div className="flex min-w-0 flex-1 items-center gap-4">
         <div className="relative aspect-[3/4] w-14 shrink-0 overflow-hidden bg-borda-sutil">
           {capa && (
-            // Miniatura de 56px: o <img> simples basta, sem o otimizador.
-            <img src={urlDaImagem(capa)} alt="" className="size-full object-cover" />
+            // São dezenas de peças na lista: com a foto inteira, o painel
+            // baixava megabytes para mostrar quadradinhos de 56 px.
+            <Image src={urlDaImagem(capa)} alt="" fill sizes="56px" className="object-cover" />
           )}
         </div>
         <div className="min-w-0">

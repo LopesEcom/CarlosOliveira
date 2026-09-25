@@ -1,9 +1,9 @@
 'use client'
 
-import { Menu, X } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { Menu, Search, X } from 'lucide-react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 import { menu } from '../lib/rotas'
 import { cn } from '../lib/utils'
@@ -13,27 +13,41 @@ import BotaoWhatsapp from './BotaoWhatsapp'
 /** Quanto rolar antes de o cabeçalho sumir ao descer. Menos que isso é tremor de dedo. */
 const LIMIAR_ESCONDER = 160
 
+/** No cabeçalho o início entra como link, como na referência; a logo também leva para lá. */
+const LINKS = [{ caminho: '/', rotulo: 'Início' }, ...menu]
+
+type Painel = 'menu' | 'busca' | null
+
 /**
- * O CABEÇALHO, QUE A PÁGINA ÚNICA NÃO TINHA.
- * ==========================================
+ * O CABEÇALHO.
+ * ============
  *
- * Na landing, barra fixa era chrome de site num lugar que queria ser
- * apresentação. Com páginas de verdade (acervo, peça, história, livro,
- * escola) a pessoa precisa saber onde está e como ir para o lado, e isso é
- * trabalho de cabeçalho.
+ * No formato da referência que o Edson escolheu, sem a sacola (o site não
+ * tem carrinho: a compra fecha no WhatsApp):
  *
- * Ele some quando a pessoa desce e volta quando ela sobe: quem está descendo
- * está lendo, e quem sobe está procurando a saída. Assim o menu está à mão
- * sem comer a altura da tela do celular o tempo todo.
+ *   CELULAR      o menu à esquerda, a logo no centro e a lupa à direita.
+ *   COMPUTADOR   a logo à esquerda, os links no centro, em letra de texto
+ *                (Inter média, sem caixa alta), e a lupa na ponta direita.
+ *
+ * As duas formas são a mesma grade de três colunas (1fr, auto, 1fr): a do
+ * meio fica no centro exato da página, qualquer que seja a largura do que
+ * está nas pontas. No celular o meio é a logo; no computador, os links.
+ *
+ * A lupa abre um campo no alto da tela e leva o termo para a busca do
+ * acervo (`/acervo?q=`), que já procura por número, nome, descrição,
+ * madeira e tema. Não há uma segunda busca para manter.
  *
  * No celular os links vão para um painel de tela cheia, no escuro da
- * nogueira, com os nomes grandes: é um menu de cinco itens, não precisa de
+ * nogueira, com os nomes grandes: é um menu de seis itens, não precisa de
  * gaveta estreita.
+ *
+ * Ele some quando a pessoa desce e volta quando ela sobe: quem está descendo
+ * está lendo, e quem sobe está procurando a saída.
  */
 export default function Cabecalho() {
   const [rolado, setRolado] = useState(false)
   const [escondido, setEscondido] = useState(false)
-  const [menuAberto, setMenuAberto] = useState(false)
+  const [aberto, setAberto] = useState<Painel>(null)
   const ultimoY = useRef(0)
   const pathname = usePathname()
   /* Na página inicial o cabeçalho flutua transparente sobre a foto da capa,
@@ -52,31 +66,33 @@ export default function Cabecalho() {
     return () => window.removeEventListener('scroll', aoRolar)
   }, [])
 
-  /* Trocar de página fecha o menu. É o ajuste de estado na renderização que o
-     React recomenda no lugar de um efeito: evita um quadro com o menu aberto
-     sobre a página nova. */
+  /* Trocar de página fecha o que estiver aberto. É o ajuste de estado na
+     renderização que o React recomenda no lugar de um efeito: evita um
+     quadro com o painel aberto sobre a página nova. */
   const [caminhoAnterior, setCaminhoAnterior] = useState(pathname)
   if (caminhoAnterior !== pathname) {
     setCaminhoAnterior(pathname)
-    setMenuAberto(false)
+    setAberto(null)
   }
 
-  /* Menu aberto: trava a rolagem do fundo e o Esc fecha. */
+  /* Painel aberto: trava a rolagem do fundo e o Esc fecha. */
   useEffect(() => {
-    if (!menuAberto) return
+    if (!aberto) return
     const anterior = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     const aoTeclar = (evento: KeyboardEvent) => {
-      if (evento.key === 'Escape') setMenuAberto(false)
+      if (evento.key === 'Escape') setAberto(null)
     }
     document.addEventListener('keydown', aoTeclar)
     return () => {
       document.body.style.overflow = anterior
       document.removeEventListener('keydown', aoTeclar)
     }
-  }, [menuAberto])
+  }, [aberto])
 
   const claro = sobreCapa && !rolado
+  const corIcone = claro ? 'text-creme' : 'text-tinta'
+  const fechar = () => setAberto(null)
 
   return (
     <>
@@ -87,61 +103,131 @@ export default function Cabecalho() {
           claro
             ? 'border-b border-transparent bg-transparent'
             : 'border-b border-borda-sutil bg-branco/95 backdrop-blur-sm',
-          escondido && !menuAberto && '-translate-y-full',
+          escondido && !aberto && '-translate-y-full',
         )}
       >
-        <div className="container-site flex h-[4.5rem] items-center justify-between gap-6 md:h-20">
-          <Link href="/" aria-label="Carlos Oliveira, página inicial" className="min-w-0">
+        {/* `minmax(0, 1fr)` nas pontas: com `1fr` puro, a coluna dos dois
+            ícones crescia até o tamanho deles e empurrava a logo para fora
+            do centro no celular. */}
+        <div className="container-site grid h-[4.5rem] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-1 md:h-20 lg:gap-6">
+          <div className="-ml-2 flex items-center lg:hidden">
+            <button
+              type="button"
+              onClick={() => setAberto('menu')}
+              aria-expanded={aberto === 'menu'}
+              aria-controls="menu-celular"
+              aria-label="Abrir o menu"
+              className={cn('inline-flex size-11 items-center justify-center', corIcone)}
+            >
+              <Menu size={22} strokeWidth={1.5} aria-hidden />
+            </button>
+          </div>
+
+          <Link href="/" aria-label="Carlos Oliveira, página inicial" className="shrink-0 justify-self-center lg:justify-self-start">
             <Assinatura clara={claro} />
           </Link>
 
-          <nav aria-label="Principal" className="hidden items-center gap-8 lg:flex">
-            {menu.map((item) => (
+          <nav aria-label="Principal" className="hidden items-center gap-9 lg:flex xl:gap-11">
+            {LINKS.map((item) => (
               <Link
                 key={item.caminho}
                 href={item.caminho}
                 aria-current={ativo(item.caminho, pathname) ? 'page' : undefined}
                 className={cn(
-                    'relative py-2 rotulo transition-colors duration-300 ease-suave',
-                    claro ? 'text-creme hover:text-creme/70' : 'text-tinta hover:text-cinza',
-                    /* O filete embaixo do item ativo é o "você está aqui". A
-                       página de uma peça também conta como acervo. */
-                    ativo(item.caminho, pathname) &&
-                      cn('after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px', claro ? 'after:bg-branco' : 'after:bg-tinta'),
-                  )}
+                  'relative py-2 text-[0.9375rem] font-medium transition-colors duration-300 ease-suave',
+                  claro ? 'text-creme hover:text-creme/70' : 'text-tinta hover:text-cinza',
+                  /* O filete embaixo do item ativo é o "você está aqui". */
+                  ativo(item.caminho, pathname) &&
+                    cn('after:absolute after:inset-x-0 after:bottom-0.5 after:h-px', claro ? 'after:bg-creme' : 'after:bg-tinta'),
+                )}
               >
                 {item.rotulo}
               </Link>
             ))}
           </nav>
 
-          {/* No celular estreito, só o ícone: a palavra "Menu" roubava a
-              largura de que o nome precisa para não ser cortado. */}
-          <button
-            type="button"
-            onClick={() => setMenuAberto(true)}
-            aria-expanded={menuAberto}
-            aria-controls="menu-celular"
-            aria-label="Abrir o menu"
-            className={cn(
-              '-mr-2 inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-2.5 px-2 rotulo lg:hidden',
-              claro ? 'text-creme' : 'text-tinta',
-            )}
-          >
-            <span aria-hidden className="hidden sm:inline">Menu</span>
-            <Menu size={22} strokeWidth={1.5} aria-hidden />
-          </button>
+          {/* A mesma lupa nas duas formas: na ponta direita, no celular e no
+              computador. Com a nav escondida, ela cai sozinha na terceira coluna. */}
+          <BotaoLupa
+            aoAbrir={() => setAberto('busca')}
+            aberta={aberto === 'busca'}
+            className={cn('-mr-2 justify-self-end', corIcone)}
+          />
         </div>
       </header>
 
-      {menuAberto && <MenuCelular aoFechar={() => setMenuAberto(false)} />}
+      {aberto === 'menu' && <MenuCelular aoFechar={fechar} />}
+      {aberto === 'busca' && <Busca aoFechar={fechar} />}
     </>
+  )
+}
+
+function BotaoLupa({ aoAbrir, aberta, className }: { aoAbrir: () => void; aberta: boolean; className?: string }) {
+  return (
+    <button
+      type="button"
+      onClick={aoAbrir}
+      aria-expanded={aberta}
+      aria-controls="busca-cabecalho"
+      aria-label="Buscar uma peça"
+      className={cn('inline-flex size-11 items-center justify-center', className)}
+    >
+      <Search size={20} strokeWidth={1.5} aria-hidden />
+    </button>
   )
 }
 
 /** O item do menu da página atual. A página de uma peça também conta como acervo. */
 function ativo(caminho: string, pathname: string): boolean {
+  if (caminho === '/') return pathname === '/'
   return pathname === caminho || pathname.startsWith(`${caminho}/`) || (caminho === '/acervo' && pathname.startsWith('/peca/'))
+}
+
+/**
+ * A BUSCA DO CABEÇALHO.
+ * =====================
+ *
+ * Um campo no alto da tela, sobre um véu que fecha ao toque. Enviar leva ao
+ * acervo com o termo; lá a pessoa continua refinando com os filtros.
+ */
+function Busca({ aoFechar }: { aoFechar: () => void }) {
+  const router = useRouter()
+  const [termo, setTermo] = useState('')
+
+  function enviar(evento: FormEvent) {
+    evento.preventDefault()
+    const busca = termo.trim()
+    router.push(busca ? `/acervo?q=${encodeURIComponent(busca)}` : '/acervo')
+    aoFechar()
+  }
+
+  return (
+    <div id="busca-cabecalho" role="dialog" aria-modal="true" aria-label="Buscar uma peça" className="fixed inset-0 z-[55]">
+      <button type="button" aria-label="Fechar a busca" onClick={aoFechar} className="absolute inset-0 bg-tinta/40" />
+      <div className="relative border-b border-borda bg-branco">
+        <form onSubmit={enviar} className="container-site flex h-[4.5rem] items-center gap-3 md:h-20" role="search">
+          <Search size={20} strokeWidth={1.5} aria-hidden className="shrink-0 text-cinza" />
+          <label className="min-w-0 flex-1">
+            <span className="sr-only">Buscar por nome ou número</span>
+            <input
+              type="search"
+              value={termo}
+              onChange={(e) => setTermo(e.target.value)}
+              placeholder="Buscar: coruja, santa, 0012…"
+              enterKeyHint="search"
+              autoFocus
+              /* 16px no mínimo: abaixo disso o Safari do iPhone dá zoom na
+                 página ao focar o campo. */
+              className="h-11 w-full bg-transparent text-base text-tinta outline-none placeholder:text-cinza [&::-webkit-search-cancel-button]:appearance-none"
+            />
+          </label>
+          <button type="button" onClick={aoFechar} aria-label="Fechar a busca" className="-mr-2 inline-flex size-11 shrink-0 items-center justify-center text-tinta">
+            <X size={22} strokeWidth={1.5} aria-hidden />
+          </button>
+        </form>
+      </div>
+    </div>
+  )
 }
 
 function MenuCelular({ aoFechar }: { aoFechar: () => void }) {
@@ -164,27 +250,27 @@ function MenuCelular({ aoFechar }: { aoFechar: () => void }) {
       tabIndex={-1}
       className="fixed inset-0 z-[55] flex flex-col overflow-y-auto bg-tinta text-creme outline-none lg:hidden"
     >
-      <div className="container-site flex h-[4.5rem] shrink-0 items-center justify-between gap-6 md:h-20">
-        <Link href="/" aria-label="Carlos Oliveira, página inicial" className="min-w-0">
-          <Assinatura clara />
-        </Link>
+      <div className="container-site grid h-[4.5rem] shrink-0 grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-1 md:h-20">
         <button
           type="button"
           onClick={aoFechar}
           aria-label="Fechar o menu"
-          className="-mr-2 inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-2.5 px-2 rotulo"
+          className="-ml-2 inline-flex size-11 items-center justify-center"
         >
-          <span aria-hidden className="hidden sm:inline">Fechar</span>
           <X size={22} strokeWidth={1.5} aria-hidden />
         </button>
+        <Link href="/" aria-label="Carlos Oliveira, página inicial" className="justify-self-center">
+          <Assinatura clara />
+        </Link>
       </div>
 
       <nav aria-label="Principal" className="container-site flex flex-1 flex-col justify-center py-10">
         <ol>
-          {menu.map((item, indice) => (
+          {LINKS.map((item, indice) => (
             <li key={item.caminho} className="border-b border-creme/15 first:border-t">
               <Link
                 href={item.caminho}
+                onClick={aoFechar}
                 aria-current={ativo(item.caminho, pathname) ? 'page' : undefined}
                 className={cn(
                   'flex items-baseline gap-5 py-5 font-display text-h1',

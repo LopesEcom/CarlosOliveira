@@ -9,6 +9,7 @@ import {
   type PointerEvent,
   type ReactNode,
 } from 'react'
+import Image from 'next/image'
 
 import { cn } from '../lib/utils'
 
@@ -23,15 +24,14 @@ interface VisorProps {
    *
    * Quem folheou até a quinta foto em tela cheia espera encontrar a quinta
    * ao fechar. Voltar para a primeira dá a impressão de que a navegação não
-   * foi registrada, e na prova, obriga a refazer o caminho na frente da
-   * noiva.
+   * foi registrada, e obriga a refazer o caminho.
    */
   aoFechar: (indiceFinal: number) => void
   /** Uma ação ao lado do fechar. No site do Carlos: marcar a peça para a mensagem. */
   acao?: ReactNode
 }
 
-/** Quanto a foto cresce no zoom. Acima disso a renda vira mancha. */
+/** Quanto a foto cresce no zoom. Acima disso o veio da madeira vira mancha. */
 const FATOR_ZOOM = 2.4
 
 /** Distância mínima, em pixels, para um arrasto virar troca de foto. */
@@ -41,24 +41,20 @@ const LIMIAR_ARRASTO = 55
  * A FOTO EM TELA CHEIA, o momento de venda.
  * ==========================================
  *
- * Este componente existe por causa de uma frase da conversa: o catálogo é a
- * ferramenta que a Danielli usa NA LOJA, ao apresentar os vestidos para a
- * noiva. Isso é uma tela sendo virada para outra pessoa, a dois palmos do
- * rosto, e nesse enquadramento a grade de cards não serve de nada.
- *
- * O que serve é a foto ocupando tudo, e o zoom. Vestido de noiva se vende no
- * detalhe: o bordado do corpete, o acabamento do decote, o tipo de renda. Sem
- * poder aproximar, a noiva pergunta "mas de perto como é?" e a resposta vira
- * uma ida até a arara.
+ * Peça entalhada se vende no detalhe: o corte da goiva, o veio da madeira,
+ * o acabamento de cada pena ou dobra de manto. Quem olha pelo celular não
+ * pode pegar a peça na mão, então a foto ocupa a tela inteira e dá para
+ * aproximar. Sem isso, a pergunta "mas de perto como é?" vira mensagem no
+ * WhatsApp antes mesmo de a pessoa decidir se gostou.
  *
  * DECISÕES QUE PARECEM DETALHE E NÃO SÃO
  * --------------------------------------
  *  - O fundo é PRETO CHEIO, e não o preto suave da marca. Aqui a paleta cede
- *    para a foto: qualquer fundo com luz própria altera a cor do marfim, e
- *    cor de vestido é o que a noiva está tentando julgar.
+ *    para a foto: qualquer fundo com luz própria altera o tom da madeira, e
+ *    o tom é parte do que a pessoa está tentando julgar.
  *  - O zoom foca ONDE a pessoa tocou, e não no centro. Zoom que vai sempre ao
- *    centro obriga a arrastar até o detalhe, e quem está segurando a tela para
- *    outra pessoa ver não tem mão sobrando.
+ *    centro obriga a arrastar até o detalhe, e no celular isso é uma mão
+ *    fazendo o trabalho de duas.
  *  - Arrastar de lado troca de foto só quando NÃO está com zoom. Com zoom, o
  *    arrasto é para percorrer a imagem, que é o gesto que a mão já espera.
  */
@@ -92,7 +88,7 @@ export default function Visor({ imagens, indiceInicial, nome, aoFechar, acao }: 
     [imagens.length],
   )
 
-  /* Teclado: a Danielli usa isto no computador da loja, não só no celular. */
+  /* Teclado: no computador, as setas trocam de foto e o Esc fecha. */
   useEffect(() => {
     function aoTeclar(evento: KeyboardEvent) {
       if (evento.key === 'Escape') aoFechar(indice)
@@ -264,8 +260,8 @@ export default function Visor({ imagens, indiceInicial, nome, aoFechar, acao }: 
         )}
       </div>
 
-      {/* Miniaturas: numa prova a noiva pede "volta naquela de costas", e
-          procurar isso arrastando uma por uma custa tempo de atendimento. */}
+      {/* Miniaturas: para voltar direto à foto de costas, sem arrastar uma
+          por uma até ela. */}
       {varias && (
         <div className="shrink-0 overflow-x-auto p-3 sm:p-5">
           <ul className="mx-auto flex w-max gap-2">
@@ -277,17 +273,13 @@ export default function Visor({ imagens, indiceInicial, nome, aoFechar, acao }: 
                   aria-label={`Ver foto ${i + 1}`}
                   aria-current={i === indice}
                   className={cn(
-                    'block size-14 overflow-hidden border-2 transition-colors duration-300 ease-suave sm:size-16',
+                    'relative block size-14 overflow-hidden border-2 transition-colors duration-300 ease-suave sm:size-16',
                     i === indice ? 'border-creme' : 'border-transparent opacity-50 hover:opacity-100',
                   )}
                 >
-                  <img
-                    src={imagem}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                    className="size-full object-cover"
-                  />
+                  {/* A foto grande de cima continua inteira, para o zoom; a
+                      miniatura vem do otimizador, pequena. */}
+                  <Image src={imagem} alt="" fill sizes="64px" className="object-cover" />
                 </button>
               </li>
             ))}

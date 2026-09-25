@@ -10,9 +10,12 @@ import './globals.css'
  * Google na hora de abrir a página, e sem o texto piscar trocando de fonte.
  * As variáveis são lidas em globals.css (`--font-display`, `--font-corpo`).
  */
+// A serifa só aparece no peso 400 (títulos, itálicos, preços). Com a faixa
+// 400 a 600 o Google manda a fonte variável, mais pesada, por dois pesos que
+// o site não usa.
 const serifa = Source_Serif_4({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: '400',
   style: ['normal', 'italic'],
   variable: '--fonte-serifa',
   display: 'swap',

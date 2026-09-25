@@ -253,7 +253,7 @@ export function useTelaLarga(minimo = 1024): boolean {
  * exatamente o quanto a pessoa rola enquanto a tela fica parada.
  *
  * Sem a medida, a altura seria um número escolhido no chute, e ele quebraria
- * no dia em que a Danielli acrescentasse um vestido.
+ * no dia em que o Carlos marcasse mais uma peça como destaque.
  *
  * O RITMO NÃO É 1:1, E ISSO É DELIBERADO
  * --------------------------------------

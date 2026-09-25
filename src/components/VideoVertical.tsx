@@ -11,14 +11,14 @@ interface VideoVerticalProps {
   src: string
   /** Versão menor, usada em tela estreita. Sem ela, vale `src` em todo lugar. */
   srcCelular?: string
-  /** Pôster .webp, gerado por scripts/videos.mjs. */
+  /** Pôster .webp, um quadro do próprio vídeo. */
   poster: string
   /**
    * Descrição do que se vê, para quem não vê.
    *
    * O vídeo é mudo e decorativo do ponto de vista da informação, mas não do
    * ponto de vista do conteúdo: quem usa leitor de tela precisa saber que ali
-   * tem um vestido, e qual.
+   * o Carlos está entalhando, e o quê.
    */
   alt: string
   className?: string
@@ -29,16 +29,21 @@ interface VideoVerticalProps {
  *
  * DUAS VERSÕES DO MESMO VÍDEO
  * ---------------------------
- * A de 540px vai para telas estreitas, a de 720px para o resto. É metade dos
- * bytes num bloco que responde por quase todo o peso da apresentação, e a
- * maioria das noivas abre isto no celular, no 4G.
+ * Com `srcCelular`, a versão menor vai para telas estreitas. Hoje os vídeos
+ * da oficina já têm 480 px de largura (vieram assim do WhatsApp), então um
+ * arquivo só serve às duas telas.
  *
  * NADA BAIXA ANTES DE ENTRAR NA TELA
  * ----------------------------------
  * `preload="none"` e o `src` só é preenchido quando o bloco chega ao campo de
- * visão. Três vídeos de ~2,5 MB carregados de largada seriam 7 MB gastos por
- * uma noiva que talvez pare na terceira folha, e esta apresentação vive de
- * ser aberta no 4G, no meio de uma conversa de WhatsApp.
+ * visão. Os quatro vídeos da página somam uns 4,6 MB, e a maior parte de
+ * quem chega vem pelo celular, no 4G, a partir de um link de WhatsApp.
+ *
+ * ECONOMIA DE DADOS
+ * -----------------
+ * Quem ligou a economia de dados no aparelho (`Save-Data`) ou está numa
+ * conexão 2G não baixa vídeo sozinho: fica o pôster com o botão de play, e o
+ * vídeo só vem se a pessoa tocar.
  *
  * E PAUSA AO SAIR
  * ---------------
@@ -48,9 +53,9 @@ interface VideoVerticalProps {
  * POR QUE MUDO
  * ------------
  * Não é escolha estética: navegador nenhum deixa um vídeo com som começar
- * sozinho. Os arquivos já vêm sem faixa de áudio (ver scripts/videos.mjs),
- * então não há nada para desmutar, se um dia entrar vídeo com a Danielli
- * falando, ele precisa de outro tratamento: capa e botão de play.
+ * sozinho. Os arquivos já vêm sem faixa de áudio, então não há nada para
+ * desmutar. Se um dia entrar vídeo com o Carlos falando, ele precisa de
+ * outro tratamento: capa e botão de play.
  *
  * ACESSIBILIDADE
  * --------------
@@ -88,9 +93,20 @@ export default function VideoVertical({
   const [carregar, setCarregar] = useState(false)
   const [naTela, setNaTela] = useState(false)
   const [tocando, setTocando] = useState(true)
+  /* Lido num efeito, e não no estado inicial: o servidor não sabe da conexão
+     de ninguém, e a primeira renderização tem de ser igual nos dois lados. */
+  const [economia, setEconomia] = useState(false)
   /* Pelo hook, e não lido direto: a página sai pré-renderizada do build, e
      o vídeo e o pôster são HTML diferentes (ver useMovimentoReduzido). */
   const semMovimento = useMovimentoReduzido()
+
+  useEffect(() => {
+    const conexao = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection
+    if (conexao?.saveData || conexao?.effectiveType === '2g' || conexao?.effectiveType === 'slow-2g') {
+      setEconomia(true)
+      setTocando(false)
+    }
+  }, [])
 
   /* O observador só responde uma coisa: está na tela ou não. */
   useEffect(() => {
@@ -116,8 +132,8 @@ export default function VideoVertical({
   /* Entrou na tela uma vez: o arquivo passa a valer a pena baixar. Não volta
      atrás, descarregar e rebaixar a cada rolagem seria pior que manter. */
   useEffect(() => {
-    if (naTela) setCarregar(true)
-  }, [naTela])
+    if (naTela && !economia) setCarregar(true)
+  }, [naTela, economia])
 
   /*
     O PLAY MORA AQUI, E NÃO NO OBSERVADOR.
@@ -147,6 +163,12 @@ export default function VideoVertical({
   function alternar() {
     const elemento = video.current
     if (!elemento) return
+    // Com economia de dados o arquivo ainda não veio: o toque é o pedido.
+    if (!carregar) {
+      setCarregar(true)
+      setTocando(true)
+      return
+    }
     if (elemento.paused) {
       elemento.play().catch(() => {})
       setTocando(true)
@@ -196,6 +218,7 @@ export default function VideoVertical({
                        bg-tinta/60 text-creme transition-opacity duration-300 ease-suave
                        hover:bg-tinta/85 sm:bottom-3 sm:right-3 sm:size-10 sm:opacity-0
                        sm:focus-visible:opacity-100 sm:group-hover:opacity-100"
+            style={economia && !carregar ? { opacity: 1 } : undefined}
           >
             {tocando ? (
               <Pause size={16} strokeWidth={1.75} aria-hidden />

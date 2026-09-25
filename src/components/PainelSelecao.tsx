@@ -3,6 +3,7 @@
 import { X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { linkWhatsApp } from '../lib/brand'
@@ -118,8 +119,9 @@ export default function PainelSelecao({ aoFechar }: { aoFechar: () => void }) {
               <li key={obra.slug} className="flex items-center gap-4 border-b border-borda py-3">
                 <Link href={caminhoPeca(obra)} onClick={aoFechar} className="shrink-0">
                   {obra.capa ? (
-                    // Miniatura de 56px: o <img> simples basta, sem passar pelo otimizador.
-                    <img src={obra.capa} alt="" className="aspect-[3/4] w-14 bg-borda-sutil object-cover" />
+                    // A capa guardada é a foto grande (2000 px); o otimizador
+                    // manda a de 96 ou 256 px, conforme a tela.
+                    <Image src={obra.capa} alt="" width={56} height={75} className="aspect-[3/4] w-14 bg-borda-sutil object-cover" />
                   ) : (
                     <span className="block aspect-[3/4] w-14 bg-borda-sutil" />
                   )}

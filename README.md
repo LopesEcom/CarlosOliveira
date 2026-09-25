@@ -108,7 +108,7 @@ acervo/acervo.xlsx  → npm run acervo → src/data/acervo.gerado.json → npm r
 
 - O **número** (4 dígitos) é a chave de tudo: ficha de papel, etiqueta, mensagem de WhatsApp, endereço da página. Peças 0001–0032 já existem (0001 é a bailarina, ainda sem foto). **Peça nova: 0033 em diante** (o painel sugere o próximo).
 - Peça sem nenhuma foto fica guardada mas **não aparece no site**.
-- Fotos antigas (WhatsApp) ficam em `public/obras/` e o banco guarda o caminho (`/obras/…`); as enviadas pelo painel vão para o bucket `pecas` do Supabase.
+- As fotos do acervo saem de `public/acervo/` (geradas pelo `npm run fotos`) e o banco guarda o caminho (`/acervo/…`); as enviadas pelo painel vão para o bucket `pecas` do Supabase. A antiga `public/obras/` foi removida em 25/09/2026: os originais continuam em `imagens Carlos/peças/` e no histórico do git.
 
 ---
 
@@ -173,7 +173,6 @@ acervo/  fotos/  marca/  vendas/  public/   (como antes)
 - Todas as peças têm foto nova. A 0018 Ave estilizada saiu do acervo a pedido do Edson.
 - A capa do livro diz **"Carlos Roberto, Mestre Escultor"**, e o site usa "Carlos Oliveira": confirmar qual nome ele assina.
 - O "Aprender a fazer" das peças abre a apostila **Escola Oficina Arte Pira** num link do Meta AI (`CAMINHO_APRENDER` em `src/lib/rotas.ts`). Link de terceiro, pode sair do ar: trocar pela landing do livro quando existir.
-- `public/obras/` guarda cópias das imagens de `imagens Carlos/peças/` (~73 MB) que o site não usa mais (as fotos saem de `public/acervo/`). Vão para a Vercel se ficarem ali.
 - "Sem molde, sem resina, sem emenda" (texto da capa e da FAQ que nunca veio dele).
 - A ordem da trajetória e os anos.
 - O sumário real do manual de entalhes (a seção do livro usa tópicos genéricos).

@@ -3,6 +3,7 @@
 import { Check, Plus } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { fichaCurta } from '../lib/formato'
 import { itemDaPeca } from '../lib/mensagens'
@@ -60,9 +61,18 @@ export function CartaoObra({ peca, prioridade = false }: { peca: Peca; prioridad
   const escolhivel = podeComprar(peca)
   const caminho = caminhoPeca(peca)
   const [capa, segunda] = peca.imagens
+  /* A segunda foto só é pedida quando um mouse entra no cartão. Antes ela
+     vinha junto com a capa em toda peça da grade, e no celular, onde não há
+     hover, era o dobro de download para uma foto que nunca aparecia. */
+  const [verso, setVerso] = useState(false)
 
   return (
-    <article className="group">
+    <article
+      className="group"
+      onPointerEnter={(evento) => {
+        if (evento.pointerType === 'mouse') setVerso(true)
+      }}
+    >
       <div className="relative overflow-hidden bg-borda-sutil">
         <Link href={caminho} className="relative block aspect-[3/4]" tabIndex={-1} aria-hidden>
           {capa && (
@@ -80,7 +90,7 @@ export function CartaoObra({ peca, prioridade = false }: { peca: Peca; prioridad
           )}
           {/* A segunda foto aparece por cima no hover: mostra o outro lado da
               peça sem abrir a página. Sem segunda foto, fica o zoom. */}
-          {segunda && (
+          {segunda && verso && (
             <Image
               src={segunda}
               alt=""
