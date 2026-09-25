@@ -618,6 +618,33 @@
 }
 
 /* ==========================================================================
+   ESTEIRA (components/Esteira.tsx)
+   O cartão que entra num lugar da fileira vem da direita, esmaecido, como
+   na esteira de coleções da Lennys.
+   ========================================================================== */
+.esteira-entrando {
+  animation: esteira-entra 0.7s var(--ease-suave) both;
+}
+
+@keyframes esteira-entra {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Depois da regra acima, senão ela venceria. */
+@media (prefers-reduced-motion: reduce) {
+  .esteira-entrando {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
    FAIXA DE PREÇO (components/acervo/FaixaPreco.tsx)
    Dois input[type=range] sobrepostos no mesmo trilho, como no acervo da
    Lennys. O input em si não recebe ponteiro; só a bolinha recebe, e é isso
