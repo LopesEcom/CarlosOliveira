@@ -8,7 +8,7 @@ import type { Config } from 'tailwindcss'
  * src/index.css, que é a fonte única de verdade dos tokens.
  */
 export default {
-  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       /**
@@ -33,12 +33,15 @@ export default {
       },
 
       fontSize: {
-        h1: ['var(--fs-h1)', { lineHeight: '1.1', letterSpacing: '0.06em' }],
-        h2: ['var(--fs-h2)', { lineHeight: '1.15', letterSpacing: '0.08em' }],
-        h3: ['var(--fs-h3)', { lineHeight: '1.2', letterSpacing: '0.1em' }],
-        h4: ['var(--fs-h4)', { lineHeight: '1.3', letterSpacing: '0.12em' }],
-        h5: ['var(--fs-h5)', { lineHeight: '1.4', letterSpacing: '0.14em' }],
-        h6: ['var(--fs-h6)', { lineHeight: '1.4', letterSpacing: '0.18em' }],
+        // Títulos em caixa baixa, sem entreletra larga: a serifa de livro
+        // pede o espaçamento de livro. O leve negativo nos corpos grandes
+        // compensa o ar que o desenho ganha quando cresce.
+        h1: ['var(--fs-h1)', { lineHeight: '1.12', letterSpacing: '-0.01em' }],
+        h2: ['var(--fs-h2)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        h3: ['var(--fs-h3)', { lineHeight: '1.2', letterSpacing: '-0.005em' }],
+        h4: ['var(--fs-h4)', { lineHeight: '1.3', letterSpacing: '0' }],
+        h5: ['var(--fs-h5)', { lineHeight: '1.35', letterSpacing: '0' }],
+        h6: ['var(--fs-h6)', { lineHeight: '1.4', letterSpacing: '0' }],
       },
 
       letterSpacing: {

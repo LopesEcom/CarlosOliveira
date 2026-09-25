@@ -1,0 +1,1086 @@
+{
+  "geradoEm": "2026-09-25T06:09:38.318Z",
+  "pecas": {
+    "0002-coruja": {
+      "pasta": "0002-coruja",
+      "numero": "0002",
+      "slug": "coruja",
+      "assinatura": "93e399951366",
+      "capa": {
+        "base": "/acervo/0002-coruja/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBadBDd9VuVHcDk4EAD+7Uheq50S1ze3HpH5LSMsdXkBGl14iQDqBPKAg+E18Sd33AOwqkO/rJ2Da/2KdKo+3I3WWjVzgzEjC9cR2K32uCylNcyCHYEAAAA=",
+        "cor": "#e8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0002-coruja/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        },
+        {
+          "base": "/acervo/0002-coruja/02",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "02.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 2 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento.",
+        "02.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0003-aguia": {
+      "pasta": "0003-aguia",
+      "numero": "0003",
+      "slug": "aguia",
+      "assinatura": "1c2c7f1eb1a4",
+      "capa": {
+        "base": "/acervo/0003-aguia/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JQBOmUABp1gaSeOnaPiAA/up2HeNjMjNUpXFWl/Pxt8MmObZqcXvVA4yGc7OmLN3mNyqGGS398hohtTWn6NrWptZuZC5qjIAAAA==",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0003-aguia/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0004-cristo-coroa-de-espinhos": {
+      "pasta": "0004-cristo-coroa-de-espinhos",
+      "numero": "0004",
+      "slug": "cristo-coroa-de-espinhos",
+      "assinatura": "a37d28101f5e",
+      "capa": {
+        "base": "/acervo/0004-cristo-coroa-de-espinhos/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JaACdMoADS3xhP+XedavX3UDAAP7qj9lwBTJplQ9PHDLLvG6Jeb1CLm1VMa7KutdKDFSdnZ2Bhv3laOvFEJQZ8Q6SRoh6BJp0lDzyhtpqA53HGZ8qjOsjpPcNNQeYAAA=",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0004-cristo-coroa-de-espinhos/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0005-nossa-senhora": {
+      "pasta": "0005-nossa-senhora",
+      "numero": "0005",
+      "slug": "nossa-senhora",
+      "assinatura": "d6f0df8653b4",
+      "capa": {
+        "base": "/acervo/0005-nossa-senhora/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdAB6LpaDQr0/vgAD+6yXqxsMu1oF7bNVbfyMIdNcLZ1U4FF0ww9dr4fYfj4HbdclgD5x7T3KhU1WXYwZg1l5nkNTjGNtj5iBtvcnYKUUBuXbz0+i3oAA=",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0005-nossa-senhora/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0006-oratorio-gotico": {
+      "pasta": "0006-oratorio-gotico",
+      "numero": "0006",
+      "slug": "oratorio-gotico",
+      "assinatura": "41e56e9426b3",
+      "capa": {
+        "base": "/acervo/0006-oratorio-gotico/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdMoADTrnl/0fOnA2qKCAA/u1HmJshu/iexnx5jl7OeqrdUFri9AcSOFKcRdUhNRPoGp+IMZ9xF8oJ5RiQwZzv+JHSTpPG1CtwLzLl21p01e+zD8j9luVdfl/wNAAAAA==",
+        "cor": "#f8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0006-oratorio-gotico/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        },
+        {
+          "base": "/acervo/0006-oratorio-gotico/02",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "02.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 2 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento.",
+        "02.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0007-santa-ceia": {
+      "pasta": "0007-santa-ceia",
+      "numero": "0007",
+      "slug": "santa-ceia",
+      "assinatura": "9e5a42506bb7",
+      "capa": {
+        "base": "/acervo/0007-santa-ceia/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZQC7ACHf5AAvswAA/upukO6o6gKBEs6Zi8hJ22Ey335HodPgqy6W9GfjTpfZXHYkAAAA",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0007-santa-ceia/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0008-relogio-dos-cavalos": {
+      "pasta": "0008-relogio-dos-cavalos",
+      "numero": "0008",
+      "slug": "relogio-dos-cavalos",
+      "assinatura": "49cd8f8245a9",
+      "capa": {
+        "base": "/acervo/0008-relogio-dos-cavalos/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZgCdMoADTdZdkmn5XXqLgAD+7T0v5FFfqJfNv3Q1wvbc5cQJOxzt0KuN6J/eJSOdeKxxxqphz+WptedB/LBTr81uaYoHzJzZSHR+XFsAGFWAHozxTImUpQAAAA==",
+        "cor": "#e8e8d8",
+        "enquadramento": "atencao"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0008-relogio-dos-cavalos/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "Capa sem fundo neutro: o enquadramento é aproximado. Refazer com o fundo cinza do guia.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0009-bau-entalhado": {
+      "pasta": "0009-bau-entalhado",
+      "numero": "0009",
+      "slug": "bau-entalhado",
+      "assinatura": "6541ac43629f",
+      "capa": {
+        "base": "/acervo/0009-bau-entalhado/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JZACdMoADTdfzqeu8IPEYAP7vwlhEwMJsewLz7KwXcaB1kntTcEN0/r+p692FQn0pzOyGqb4ctSgzbHgwuj+AAAA=",
+        "cor": "#e8d8d8",
+        "enquadramento": "atencao"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0009-bau-entalhado/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "Capa sem fundo neutro: o enquadramento é aproximado. Refazer com o fundo cinza do guia.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0010-moldura-de-folhagem": {
+      "pasta": "0010-moldura-de-folhagem",
+      "numero": "0010",
+      "slug": "moldura-de-folhagem",
+      "assinatura": "dc3abfa1adf9",
+      "capa": {
+        "base": "/acervo/0010-moldura-de-folhagem/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZAC7ACKVzkrHsQtyOAAA/uCrnqdtEjNTfSEOkdyPDKI5KfkY6yYE9nWpoYskPWedLhxik9av/IdTv+kGZWOuuRvmDtW70Suw062OX2XgAA==",
+        "cor": "#d8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0010-moldura-de-folhagem/01",
+          "larguras": [
+            640,
+            1280
+          ],
+          "largura": 1087,
+          "altura": 1446,
+          "original": "01.png"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.png: resolução baixa (1446 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0011-face-de-cristo": {
+      "pasta": "0011-face-de-cristo",
+      "numero": "0011",
+      "slug": "face-de-cristo",
+      "assinatura": "22f606844023",
+      "capa": {
+        "base": "/acervo/0011-face-de-cristo/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JQBWAAx2CEAoszBIBCgAA/vHgqDh76aqoGEAgxaqbbLtjIUfTcg07Gbff0l2T6i9nBOCujgOoQqdOtvtyfKUL6NpVkXnJkLo4plZbeOZ+9Gbei1Y8HC7Pra5oAAAA",
+        "cor": "#e8e8d8",
+        "enquadramento": "atencao"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0011-face-de-cristo/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "Capa sem fundo neutro: o enquadramento é aproximado. Refazer com o fundo cinza do guia.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0012-santa-ceia-ornamentada": {
+      "pasta": "0012-santa-ceia-ornamentada",
+      "numero": "0012",
+      "slug": "santa-ceia-ornamentada",
+      "assinatura": "c1e6cbe00704",
+      "capa": {
+        "base": "/acervo/0012-santa-ceia-ornamentada/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYwC7ACHf4/z/A32iAP7tN7Y6m0wZJKdEP9Y8NfHu9l+p0cDjMD826jm4u2xPe09POcUsgAA=",
+        "cor": "#e8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0012-santa-ceia-ornamentada/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0013-santa-das-maos-postas": {
+      "pasta": "0013-santa-das-maos-postas",
+      "numero": "0013",
+      "slug": "santa-das-maos-postas",
+      "assinatura": "13a11fa924c6",
+      "capa": {
+        "base": "/acervo/0013-santa-das-maos-postas/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOgA3RwBxGXZ42AAP7qlvuFVcrXTT4Albzk25q5wyP3+neUhk1pJr7eGVlY0GfWMiqms/WW41hY6lN09RbEAAA=",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0013-santa-das-maos-postas/01",
+          "larguras": [
+            640
+          ],
+          "largura": 1024,
+          "altura": 1024,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (1024 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0014-santa-do-manto": {
+      "pasta": "0014-santa-do-manto",
+      "numero": "0014",
+      "slug": "santa-do-manto",
+      "assinatura": "27c3456e104c",
+      "capa": {
+        "base": "/acervo/0014-santa-do-manto/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JQBOkGxBe2g6CFAGxnENkAP7tXx8z7JM2t9xIiGY50qvQ4Fu7LOcaM5O1Khl31rKrlq1Mjqsps42PNHKMQvaoGEUxGQZuZKY4tb8pZr8FEhgA",
+        "cor": "#e8e8e8",
+        "enquadramento": "atencao"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0014-santa-do-manto/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "Capa sem fundo neutro: o enquadramento é aproximado. Refazer com o fundo cinza do guia.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0015-coruja-e-face": {
+      "pasta": "0015-coruja-e-face",
+      "numero": "0015",
+      "slug": "coruja-e-face",
+      "assinatura": "16cc0930ae6f",
+      "capa": {
+        "base": "/acervo/0015-coruja-e-face/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JQBOgA3SQEdsQhA5UwAD+6yds918BukDa+a8yLxGM6siCVGuWq0JyO5hh7xE0GM4BqaKLZn/kypx/vVa4ZpdHTGlscGS0Z8pWAAAA",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0015-coruja-e-face/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0016-coruja-ao-luar": {
+      "pasta": "0016-coruja-ao-luar",
+      "numero": "0016",
+      "slug": "coruja-ao-luar",
+      "assinatura": "b6f67265b857",
+      "capa": {
+        "base": "/acervo/0016-coruja-ao-luar/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoQABUAPu1iqU2ppaQiMAgBMB2JZACdMoADTgx4UjF4f/7gNQAA/urTS5j1zIc6z5wQvkHDSp+7PMsUFHF1qKDhN1DxesMj5O+KNDHq8on+PNzEAAA=",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0016-coruja-ao-luar/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0017-peixes": {
+      "pasta": "0017-peixes",
+      "numero": "0017",
+      "slug": "peixes",
+      "assinatura": "2e7b1ba95621",
+      "capa": {
+        "base": "/acervo/0017-peixes/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoQABUAPu1kqU2ppaQiMAgBMB2JbACdMoADTuLlP/COdha8LgAA/u/OZRcCfQzdUGDqolC+QiBMxFHN7oJ++S88T1+JQJMbirnlf3Wj7PsGeDkUmTaeLsAA",
+        "cor": "#e8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0017-peixes/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0019-serpente-e-espada": {
+      "pasta": "0019-serpente-e-espada",
+      "numero": "0019",
+      "slug": "serpente-e-espada",
+      "assinatura": "e305cdd50e35",
+      "capa": {
+        "base": "/acervo/0019-serpente-e-espada/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABUAPu1kqk4ppaQiMAgBMB2JZACdMoR3ACnbKvs5j/z74AD+4c+Hyas4u6GY14l3bCM2Z6oJjK4AybO9RC5nFBe3QLBeoXSDAU5GwaNry2DuWgEDRRR9qQAAAA==",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0019-serpente-e-espada/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0020-mulher-do-chapeu": {
+      "pasta": "0020-mulher-do-chapeu",
+      "numero": "0020",
+      "slug": "mulher-do-chapeu",
+      "assinatura": "2a717a9c9e44",
+      "capa": {
+        "base": "/acervo/0020-mulher-do-chapeu/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoQABUAPu1kqk4ppaQiMAgBMB2JYwCdABugsCUswn0gAAD+6GCFa5U3H2/MgK9Zi1tFzqXRS0h1WIE1a1LXujah6B+kPcfL2lBW2HIN6n6OHmOSUlIVeQTLA1R/dgMMQAA=",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0020-mulher-do-chapeu/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0021-perfil-feminino": {
+      "pasta": "0021-perfil-feminino",
+      "numero": "0021",
+      "slug": "perfil-feminino",
+      "assinatura": "73baa8eedfea",
+      "capa": {
+        "base": "/acervo/0021-perfil-feminino/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBUehDv7/llPpmlYYAD+7Tdp23STNQfFabFRK8TFNnsFIrHUlSxvod4AAA==",
+        "cor": "#e8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0021-perfil-feminino/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0022-rosto-na-tora": {
+      "pasta": "0022-rosto-na-tora",
+      "numero": "0022",
+      "slug": "rosto-na-tora",
+      "assinatura": "bfc3803cddac",
+      "capa": {
+        "base": "/acervo/0022-rosto-na-tora/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUABprORaaMVDkRIvCAD+5xXN+xw4fvnbuhxoKZ+g8lI+oALWbeiagDa0k6oiHwINHzvVZyhv5JJNDbQ0TDXhCai1+Odgkc/nGGp+gJznaaj7ZeEU7W1QYChhQAA=",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0022-rosto-na-tora/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0023-mascara": {
+      "pasta": "0023-mascara",
+      "numero": "0023",
+      "slug": "mascara",
+      "assinatura": "c760db64fce3",
+      "capa": {
+        "base": "/acervo/0023-mascara/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoQABUAPu1kq04ppaQiMAgBMB2JQBOgBHnVGNukqggsSIAA/u3Wqt+NkQJOP4hlHyqNG8fDij5WgC3FC+28nsXtFeuEtBx0rFHfQaxL3f9TUFxfplnXm7JTKfFeTqKaAAA=",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0023-mascara/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0024-figura-de-pe": {
+      "pasta": "0024-figura-de-pe",
+      "numero": "0024",
+      "slug": "figura-de-pe",
+      "assinatura": "39305788c605",
+      "capa": {
+        "base": "/acervo/0024-figura-de-pe/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoQABUAPu1kqU2ppaQiMAgBMB2JZQC+SCHgJVjOiPnVQAD+7UeZ4/xgORIvVJSzZACgI0e/o1IpP58xK+0eZ85UI8VH7UV6zpdT+8auBL9NYgAA",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0024-figura-de-pe/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0025-figura-com-manto": {
+      "pasta": "0025-figura-com-manto",
+      "numero": "0025",
+      "slug": "figura-com-manto",
+      "assinatura": "50c534b6f08d",
+      "capa": {
+        "base": "/acervo/0025-figura-com-manto/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoQABUAPu1kqU2ppaQiMAgBMB2JZwCdABuka1z/AXWh8oAA/u1hFPsJDpMaXr+visOOjOLHIOpcbsyhL8dzubVhmfPzcaSd+VIXqQpnVJrzVaH6YaAAAA==",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0025-figura-com-manto/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0026-rosa": {
+      "pasta": "0026-rosa",
+      "numero": "0026",
+      "slug": "rosa",
+      "assinatura": "88889567ed13",
+      "capa": {
+        "base": "/acervo/0026-rosa/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUAS1Qi6f5fRrSPTEAAD+7WEWMLqK9SO1tEvY/jMIp6RJiDFv8uLpEJbHOgSZx4IzA7vXNJz8UxHavV/68HZLIp/M7SoI+LZtEAA=",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0026-rosa/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0027-girassol": {
+      "pasta": "0027-girassol",
+      "numero": "0027",
+      "slug": "girassol",
+      "assinatura": "5624a9a38036",
+      "capa": {
+        "base": "/acervo/0027-girassol/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoQABUAPu1iqU2ppaQiMAgBMB2JaACdMoADSwMwX3xNDK3nCgAA/uuFSeL23ZxDh78+WdtnN8e0taWooa3R4872kjEbv8VuJeNZ12nMsOemVw57+S5Yb98aWh7uJlQLcKbDGAAA",
+        "cor": "#e8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0027-girassol/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0028-lua": {
+      "pasta": "0028-lua",
+      "numero": "0028",
+      "slug": "lua",
+      "assinatura": "58e1367262f0",
+      "capa": {
+        "base": "/acervo/0028-lua/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JZwAAUV5cbXz7XyAA/u1TMDqq7qLq2Lr9FwFk2bKwdUGROua8DjRCszKY6e7p6bivf2/uQCqZ7lb/LCP7RPQ778AAAA==",
+        "cor": "#e8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0028-lua/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0029-relogio-cabeca-de-cavalo": {
+      "pasta": "0029-relogio-cabeca-de-cavalo",
+      "numero": "0029",
+      "slug": "relogio-cabeca-de-cavalo",
+      "assinatura": "aa4235ae14f0",
+      "capa": {
+        "base": "/acervo/0029-relogio-cabeca-de-cavalo/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBOmUABWsMktbo+zmAD+50DEiGA6qDLP6TaOtErqfT3fTzPhzJQ2gw9rSwPr7T7EdOl03MDHKpj0e+l1e5/ND9qaqAzS4ObiVIeJq80eukcz+653oiJ0E5LwAA==",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0029-relogio-cabeca-de-cavalo/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0030-relogio-de-parede": {
+      "pasta": "0030-relogio-de-parede",
+      "numero": "0030",
+      "slug": "relogio-de-parede",
+      "assinatura": "ae6e18f665be",
+      "capa": {
+        "base": "/acervo/0030-relogio-de-parede/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JQBOmUABWgVM+l9te20AA/uc7rVUV3Of/BzZvwz4A0AQyetvo4blEDUHOrNPmFsnaCj1mAX9acaZriv/+Ad8ImOdbUTuQoecD8f8vtunwAA==",
+        "cor": "#d8d8c8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0030-relogio-de-parede/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0031-moldura-de-arabescos": {
+      "pasta": "0031-moldura-de-arabescos",
+      "numero": "0031",
+      "slug": "moldura-de-arabescos",
+      "assinatura": "1761008d9021",
+      "capa": {
+        "base": "/acervo/0031-moldura-de-arabescos/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdMoADTuN0yvvH4T/LQ4AA/u0/CGS2fIwnb5rTotp6Jb5Fx23w+1bIxJJmmO/MaL5dX4gAOWuuK/nRwh1LcBnkAA==",
+        "cor": "#e8e8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0031-moldura-de-arabescos/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0032-moldura-com-coroamento": {
+      "pasta": "0032-moldura-com-coroamento",
+      "numero": "0032",
+      "slug": "moldura-com-coroamento",
+      "assinatura": "70934a5d9c52",
+      "capa": {
+        "base": "/acervo/0032-moldura-com-coroamento/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBOgBDvWr36FjB67NZfgAP7qb2Y8BJazv2KeFXC3VHmGQQQHZjIPyldoglShjlDpT5krHcRDEztkWz1AAA==",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0032-moldura-com-coroamento/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0033-aguia-sobre-a-esfera": {
+      "pasta": "0033-aguia-sobre-a-esfera",
+      "numero": "0033",
+      "slug": "aguia-sobre-a-esfera",
+      "assinatura": "471126e5a187",
+      "capa": {
+        "base": "/acervo/0033-aguia-sobre-a-esfera/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JYwCw7CG8ETkhqU+XdAAA/up7kyEsOBgUcHNFQ+hx/e1hQsrG3juV7IvbspwZ1KbUmltethkyAhc5S1T1voZAKTJMIp6gPgA=",
+        "cor": "#e8d8d8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0033-aguia-sobre-a-esfera/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    },
+    "0034-aguia-sobre-o-bloco": {
+      "pasta": "0034-aguia-sobre-o-bloco",
+      "numero": "0034",
+      "slug": "aguia-sobre-o-bloco",
+      "assinatura": "12027380e0ad",
+      "capa": {
+        "base": "/acervo/0034-aguia-sobre-o-bloco/capa",
+        "larguras": [
+          600,
+          1200
+        ],
+        "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JQBOgA6fQwgOcWAe6ejAA/u1hEd8GijRpBAdoqC8YR4VEa57XC6aCqmiqqQg7/XsWx+e4A/0BAk3Nvj21DincRFozY3vdZKam6wSA+Iwq039AAAA=",
+        "cor": "#f8e8e8",
+        "enquadramento": "automatico"
+      },
+      "fotos": [
+        {
+          "base": "/acervo/0034-aguia-sobre-o-bloco/01",
+          "larguras": [
+            640,
+            1280,
+            2000
+          ],
+          "largura": 2048,
+          "altura": 2048,
+          "original": "01.jpg"
+        }
+      ],
+      "avisos": [
+        "Só 1 foto(s). O mínimo é 3: frente, lado e um detalhe.",
+        "01.jpg: resolução baixa (2048 px). Provavelmente veio comprimida pelo WhatsApp: mandar como Documento."
+      ]
+    }
+  }
+}

@@ -1,0 +1,668 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   DESIGN TOKENS — Carlos Oliveira, escultor entalhador
+   Fonte única de verdade. O tailwind.config.ts apenas referencia estas vars.
+   ========================================================================== */
+:root {
+  /* --- Cores ------------------------------------------------------------
+     Cada cor é declarada como TRIO DE CANAIS ("R G B", sem vírgulas) porque é
+     o único formato em que o Tailwind consegue injetar alfa — sem isso,
+     `text-tinta/70` e `bg-tinta/50` são silenciosamente ignorados.
+     Logo abaixo, cada uma ganha sua versão pronta para uso em CSS puro.
+
+     A paleta inteira sai da madeira: nogueira escura, cerne claro e a poeira
+     do entalhe. Não há cor de acento — a hierarquia vem de PESO e
+     PREENCHIMENTO (cheio x contorno), nunca de matiz. Quem dá cor ao site são
+     as fotos das peças, e um acento competiria com elas.
+     ---------------------------------------------------------------------- */
+  --tinta-rgb: 42 30 21; /* #2A1E15 — nogueira escura, faz o papel do preto */
+  --branco-rgb: 255 255 255; /* #FFFFFF */
+  --creme-rgb: 245 240 231; /* #F5F0E7 — cerne claro. Só texto sobre o escuro: o fundo é sempre branco */
+  --cinza-rgb: 111 98 85; /* #6F6255 — apoio; 5,2:1 sobre creme */
+  --borda-rgb: 221 213 199; /* #DDD5C7 */
+  --borda-sutil-rgb: 228 221 209; /* #E4DDD1 */
+  --sucesso-rgb: 48 122 7; /* #307A07 */
+  --erro-rgb: 203 43 43; /* #CB2B2B */
+
+  --tinta: rgb(var(--tinta-rgb));
+  --branco: rgb(var(--branco-rgb));
+  --creme: rgb(var(--creme-rgb));
+  --cinza: rgb(var(--cinza-rgb));
+  --borda: rgb(var(--borda-rgb));
+  --borda-sutil: rgb(var(--borda-sutil-rgb));
+  --sucesso: rgb(var(--sucesso-rgb));
+  --erro: rgb(var(--erro-rgb));
+
+  /* --- Tipografia -------------------------------------------------------
+     Source Serif 4 nos títulos: serifa de livro, com eixo de tamanho óptico
+     (opsz) que afina o desenho sozinho nos corpos grandes, e por isso aguenta
+     do nome colossal da capa ao rótulo de 11px sem trocar de família.
+     Inter no corpo, para o texto longo não disputar atenção.
+     ---------------------------------------------------------------------- */
+  /* As duas famílias chegam pelo `next/font` (src/app/layout.tsx), que as
+     serve do próprio site e define `--fonte-serifa` e `--fonte-texto`. */
+  --font-display: var(--fonte-serifa), Georgia, "Times New Roman", serif;
+  --font-corpo: var(--fonte-texto), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /*
+    Escala fixa em rem. Quem a faz crescer é o mostrador da raiz, logo abaixo:
+    com um mostrador só, a escala inteira cresce junta e a proporção entre os
+    degraus nunca muda. O piso do celular está no bloco de media query.
+  */
+  --fs-h1: 2.375rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.625rem;
+  --fs-h4: 1.375rem;
+  --fs-h5: 1.125rem;
+  --fs-h6: 0.9375rem;
+
+  /* Um degrau acima do h1: abertura de folha e a frase da casa. */
+  --fs-display: 5.25rem;
+  --fs-display-sm: 3.25rem;
+
+  /* O teto do nome colossal da capa. Quem manda é o min() de `.texto-colosso`. */
+  --fs-colosso: 17rem;
+
+  --tracking-largo: 0.18em;
+  --ease-suave: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* --- Formas ----------------------------------------------------------- */
+  --shadow-sm: 0 2px 8px rgba(42, 30, 21, 0.06);
+  --shadow-md: 0 4px 16px rgba(42, 30, 21, 0.09);
+
+  /* --- Layout ----------------------------------------------------------- */
+  --largura-conteudo: 82rem;
+
+  /* Três degraus de respiro. O grande é o que faz a página ler como revista. */
+  --secao-p: 3.5rem;
+  --secao-m: 6rem;
+  --secao-g: 9rem;
+  --espaco-secao: var(--secao-m);
+
+  --colunas: 12;
+  --goteira-x: 0.75rem;
+  --goteira-y: 1.5rem;
+
+  color-scheme: light;
+}
+
+/* ==========================================================================
+   O MOSTRADOR
+   Uma linha que reescala o design inteiro: tudo é medido em rem. Abaixo de
+   1440px trava em 16px; acima sobe com a largura até 17,33px.
+   ========================================================================== */
+:root {
+  font-size: clamp(1rem, 1.1111vw, 1.0833rem);
+}
+
+/* O piso do celular: a escala volta ao tamanho que cabe em 360px. */
+@media (max-width: 767px) {
+  :root {
+    --fs-h1: 1.75rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
+    --fs-h4: 1.125rem;
+    --fs-h5: 1rem;
+    --fs-h6: 0.8125rem;
+
+    --fs-display: 2.5rem;
+    --fs-display-sm: 1.875rem;
+    --fs-colosso: 8rem;
+
+    --secao-p: 2rem;
+    --secao-m: 3.5rem;
+    --secao-g: 4.5rem;
+  }
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  * {
+    @apply border-borda-sutil;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+
+    /*
+      Tranca a página na largura da tela, para não existir a "borda infinita".
+
+      É `clip`, e não `hidden`, de propósito: `overflow: hidden` no html
+      transforma a raiz em container de rolagem e quebra o `position: sticky`
+      do cabeçalho. `clip` corta sem criar container.
+
+      Isto é a segunda barreira, não a única. O Safari anterior à 16 ignora
+      `clip`, então a contenção de verdade fica na origem: cada componente que
+      rola de lado vive dentro de um invólucro com `overflow-hidden`.
+    */
+    overflow-x: clip;
+  }
+
+  body {
+    max-width: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    /* Fundo branco sempre. O creme ficou só como cor de texto sobre os
+       blocos escuros de nogueira (capa, livro, rodapé). */
+    @apply bg-branco font-sans text-tinta antialiased;
+    font-size: 1rem;
+    line-height: 1.65;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-normal text-tinta;
+    text-wrap: balance;
+  }
+
+  h1 { @apply text-h1; }
+  h2 { @apply text-h2; }
+  h3 { @apply text-h3; }
+  h4 { @apply text-h4; }
+  h5 { @apply text-h5; }
+  h6 { @apply text-h6; }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Cantos totalmente retos em controles — regra da marca. */
+  button,
+  input,
+  select,
+  textarea {
+    border-radius: 0;
+    font-family: inherit;
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--tinta);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--tinta);
+    color: var(--creme);
+  }
+}
+
+/* ==========================================================================
+   COMPONENTES
+   ========================================================================== */
+@layer components {
+  /* --- Layout ----------------------------------------------------------- */
+  .container-site {
+    @apply mx-auto w-full max-w-conteudo px-6 md:px-10 lg:px-14;
+  }
+
+  .secao {
+    @apply py-secao;
+  }
+
+  /* --- Tipografia de apoio --------------------------------------------- */
+  /*
+    O RÓTULO: tudo o que é pequeno e em caixa alta (o "Nº 0002", a
+    categoria, o menu, os chips, os botões) é Inter semibold com entreletra
+    curta. Os títulos ficam com a serifa em caixa baixa; os dois nunca se
+    misturam, e é esse contraste que organiza a página.
+  */
+  .rotulo {
+    font-family: var(--font-corpo);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Para selo sobre foto e etiqueta de canto, onde 12px já pesa. */
+  .rotulo-sm {
+    @apply rotulo;
+    font-size: 0.6875rem;
+  }
+
+  /* O rótulo que abre cada bloco, acima do título. */
+  .eyebrow {
+    @apply rotulo text-cinza;
+  }
+
+  .titulo-secao {
+    @apply font-display text-h2 font-normal;
+  }
+
+  .link-menu {
+    @apply rotulo text-tinta transition-colors duration-300 ease-suave hover:text-cinza;
+  }
+
+  /* Filete usado como divisor sob títulos. */
+  .filete {
+    @apply block h-px w-14 bg-tinta;
+  }
+
+  /* Sobre fundo escuro o filete inverte. */
+  .filete-claro {
+    @apply block h-px w-14 bg-creme;
+  }
+
+  /* --- Botões ----------------------------------------------------------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-none border
+           border-transparent px-6 py-4 font-sans text-[0.875rem] font-semibold
+           uppercase leading-none tracking-[0.08em] transition-all duration-300
+           ease-suave disabled:pointer-events-none disabled:opacity-40;
+  }
+
+  /*
+    Sem cor de acento, a hierarquia dos botões vem do preenchimento:
+    tinta cheia (mais forte) → creme cheio → contorno.
+    O hover inverte o preenchimento, em vez de mudar de matiz.
+  */
+  .btn-primario {
+    @apply btn border-tinta bg-tinta text-creme hover:bg-branco hover:text-tinta;
+  }
+
+  .btn-secundario {
+    @apply btn border-branco bg-branco text-tinta hover:bg-tinta hover:text-creme;
+  }
+
+  .btn-contorno {
+    @apply btn border-tinta bg-transparent text-tinta
+           hover:bg-tinta hover:text-creme;
+  }
+
+  /* Contorno para uso sobre fundo escuro. */
+  .btn-contorno-claro {
+    @apply btn border-creme bg-transparent text-creme
+           hover:bg-branco hover:text-tinta;
+  }
+
+  /* No celular o respiro lateral encolhe: com 36px de cada lado, rótulos
+     como "Perguntar sobre esta peça" quebravam em duas linhas em 375px. */
+  @media (min-width: 640px) {
+    .btn {
+      @apply px-9;
+    }
+  }
+
+  .btn-sm {
+    @apply px-5 py-3 sm:px-6;
+  }
+
+  /* --- Formulário ------------------------------------------------------- */
+  .input {
+    @apply w-full rounded-none border border-borda bg-branco px-4 py-3.5
+           font-sans text-base text-tinta transition-colors duration-300
+           ease-suave placeholder:text-tinta/40
+           focus:border-tinta focus:outline-none;
+  }
+
+  .label {
+    @apply mb-2 block font-sans text-sm font-semibold text-tinta;
+  }
+
+  /* --- Superfícies ------------------------------------------------------ */
+  .card {
+    @apply rounded-none border border-borda-sutil bg-branco shadow-sm;
+  }
+}
+
+/* ==========================================================================
+   GRADE DE 12 COLUNAS
+   Bloco que começa fora da margem esquerda é o gesto mais barato para uma
+   página parecer diagramada em vez de empilhada. No celular a grade se
+   desfaz: todo bloco vira largura cheia.
+   ========================================================================== */
+@layer components {
+  .u-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--colunas), minmax(0, 1fr));
+    column-gap: var(--goteira-x);
+    row-gap: var(--goteira-y);
+    width: 100%;
+  }
+
+  .col-3 { grid-column-end: span 3; }
+  .col-4 { grid-column-end: span 4; }
+  .col-5 { grid-column-end: span 5; }
+  .col-6 { grid-column-end: span 6; }
+  .col-7 { grid-column-end: span 7; }
+  .col-8 { grid-column-end: span 8; }
+
+  .deslocar-1 { grid-column-start: 2; }
+  .deslocar-6 { grid-column-start: 7; }
+  .deslocar-7 { grid-column-start: 8; }
+  .deslocar-8 { grid-column-start: 9; }
+
+  @media (max-width: 767px) {
+    .u-grid > [class*="col-"] {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .secao-p { padding-block: var(--secao-p); }
+  .secao-m { padding-block: var(--secao-m); }
+  .secao-g { padding-block: var(--secao-g); }
+}
+
+/* ==========================================================================
+   TIPOGRAFIA EDITORIAL
+   Títulos e display em Source Serif 4, peso 400, em caixa baixa como
+   frase; o itálico da mesma serifa é a voz do Carlos (uma por bloco no
+   máximo). Rótulos em Inter semibold caixa alta (`.rotulo`), corpo em
+   Inter regular. Caixa alta na serifa só no nome colossal da capa e na
+   assinatura, que fazem papel de logo.
+   ========================================================================== */
+@layer components {
+  .t-italico {
+    @apply font-display font-normal italic;
+    font-size: var(--fs-h3);
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-transform: none;
+    text-wrap: balance;
+  }
+
+  .t-italico-g {
+    @apply t-italico;
+    font-size: var(--fs-display-sm);
+    line-height: 1.12;
+  }
+
+  .texto-display {
+    @apply font-display font-normal;
+    font-size: var(--fs-display);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  .texto-display-sm {
+    @apply font-display font-normal;
+    font-size: var(--fs-display-sm);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  /*
+    O NOME COLOSSAL
+    `--letras` chega do componente com o número de caracteres da linha mais
+    longa; o segundo termo do min() divide a largura do container por ele, e
+    o nome ocupa a linha sem estourar. `cqw` mede o pai, não a janela.
+
+    O fator é a largura média de uma maiúscula da Source Serif 4 (peso 400;
+    nesta fonte a largura quase não muda com o peso) com
+    esta entreletra. Medido no navegador: 0,531em por caractere em "CARLOS
+    OLIVEIRA", 0,528em em "OLIVEIRA" (a linha que manda no celular). O 0,56 é
+    essa medida com uns 5% de folga, a mesma que a fonte anterior tinha, para
+    um nome com letras mais largas (M, W) não estourar. Trocar a fonte obriga
+    a medir de novo.
+  */
+  .texto-colosso {
+    @apply font-display font-normal uppercase;
+    font-size: min(var(--fs-colosso), calc(100cqw / (var(--letras, 8) * 0.56)));
+    line-height: 0.86;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .caixa-colosso {
+    container-type: inline-size;
+  }
+
+  /*
+    O VÉU DA CAPA
+    Alto escuro para a assinatura, meio aberto para a foto aparecer, rodapé
+    quase chapado para o nome colossal. Nenhum texto mora no meio.
+  */
+  .veu-capa {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgb(var(--tinta-rgb) / 0.72) 0%,
+      rgb(var(--tinta-rgb) / 0.12) 22%,
+      rgb(var(--tinta-rgb) / 0.5) 38%,
+      rgb(var(--tinta-rgb) / 0.86) 58%,
+      rgb(var(--tinta-rgb) / 0.95) 100%
+    );
+  }
+
+  /* Opacidade, e não cor: funciona sobre claro e sobre escuro. */
+  .rebaixado {
+    opacity: 0.66;
+  }
+}
+
+/* ==========================================================================
+   MOVIMENTO
+   O gatilho é JavaScript (lib/movimento.ts); a aparência é toda daqui.
+   Nenhum caminho deixa texto invisível: sem observador ou com
+   prefers-reduced-motion, tudo nasce revelado.
+   ========================================================================== */
+@layer components {
+  .revelar {
+    transition:
+      opacity 850ms var(--ease-suave) var(--revelar-atraso, 0ms),
+      transform 850ms var(--ease-suave) var(--revelar-atraso, 0ms);
+  }
+
+  /*
+    Só esconde quando há JavaScript para revelar depois. A classe `js` é posta
+    no <html> por uma linha no index.html, antes de qualquer pintura. As
+    páginas saem pré-renderizadas do build, e sem esta condição quem abrisse
+    sem JavaScript (ou um robô que só lê HTML) receberia o texto todo com
+    opacidade zero.
+  */
+  .js .revelar:not(.revelar-visivel) {
+    opacity: 0;
+    transform: translate3d(0, var(--revelar-distancia, 1.75rem), 0);
+  }
+
+  .parallax {
+    overflow: hidden;
+  }
+
+  .parallax > img {
+    transform: translate3d(0, var(--parallax, 0px), 0) scale(1.12);
+    will-change: transform;
+  }
+}
+
+/* ==========================================================================
+   O DESLIZE DAS PEÇAS
+   A seção prende na tela e as peças andam de lado enquanto a pessoa rola.
+   A altura extra (`--percurso`) é medida em JavaScript e é exatamente o
+   quanto se rola com a tela parada.
+   ========================================================================== */
+@layer components {
+  .deslize {
+    position: relative;
+    height: calc(100svh + var(--percurso, 0px));
+    background-color: var(--tinta);
+    color: var(--creme);
+  }
+
+  .deslize_janela {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .deslize_trilho {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 100svh;
+    transform: translate3d(var(--deslocamento, 0px), 0, 0);
+    will-change: transform;
+  }
+
+  .deslize_painel {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+  }
+
+  .deslize_painel--cheio {
+    width: var(--tela, 100vw);
+  }
+
+  .deslize_painel--peca {
+    padding-right: 2.5rem;
+  }
+
+  .deslize_painel--fala {
+    width: min(32rem, 58vw);
+    padding-right: 2.5rem;
+  }
+
+  .deslize_abertura {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Retrato: escultura de vulto é mais alta que larga. */
+  .deslize_cartao {
+    position: relative;
+    display: block;
+    height: 68svh;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: rgb(var(--creme-rgb) / 0.06);
+  }
+
+  .deslize_cartao img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 900ms var(--ease-suave);
+  }
+
+  .deslize_cartao:hover img {
+    transform: scale(1.04);
+  }
+
+  .deslize_legenda {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 3.5rem 1.25rem 1.1rem;
+    background: linear-gradient(to top, rgb(var(--tinta-rgb) / 0.88), transparent);
+    text-align: left;
+  }
+
+  /* No celular manda a largura: uma peça por tela. */
+  @media (max-width: 1023px) {
+    .deslize_painel--peca {
+      padding-right: 0;
+    }
+
+    .deslize_painel--fala {
+      width: var(--tela, 100vw);
+      padding-inline: 1.75rem;
+    }
+
+    .deslize_cartao {
+      height: auto;
+      width: calc(var(--tela, 100vw) - 2.5rem);
+      margin-inline: 1.25rem;
+      aspect-ratio: 0.64;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .revelar:not(.revelar-visivel) {
+    opacity: 1;
+    transform: none;
+  }
+
+  .parallax > img {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   FAIXA DE PREÇO (components/acervo/FaixaPreco.tsx)
+   Dois input[type=range] sobrepostos no mesmo trilho, como no acervo da
+   Lennys. O input em si não recebe ponteiro; só a bolinha recebe, e é isso
+   que deixa arrastar uma sem pegar a outra.
+   ========================================================================== */
+.faixa-preco__controle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+}
+
+.faixa-preco__controle:focus-visible {
+  outline: none;
+}
+
+.faixa-preco__controle::-webkit-slider-thumb {
+  appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--tinta);
+  background: var(--branco);
+  cursor: pointer;
+}
+
+.faixa-preco__controle::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--tinta);
+  background: var(--branco);
+  cursor: pointer;
+}
+
+.faixa-preco__controle:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgb(var(--tinta-rgb) / 0.2);
+}
+
+.faixa-preco__controle:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 3px rgb(var(--tinta-rgb) / 0.2);
+}

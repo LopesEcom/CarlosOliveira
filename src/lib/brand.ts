@@ -17,10 +17,10 @@ export const brand = {
    * botão, então fica separado do nome curto que aparece na navegação.
    */
   livro: {
-    titulo: 'Artepira',
-    subtitulo: 'por que foi uma terapia para mim',
+    titulo: 'Arterapia',
+    subtitulo: 'Minha história, minha arte, minha missão',
     get completo() {
-      return `${this.titulo}, ${this.subtitulo}`
+      return `${this.titulo}: ${this.subtitulo}`
     },
   },
 
@@ -49,34 +49,37 @@ export const brand = {
 export const TITULO_BASE = 'Carlos Oliveira | Escultor entalhador'
 
 /**
- * TODO: trocar pelo domínio real após o deploy.
- * Usado nas URLs canônicas e nas imagens de Open Graph, que precisam ser
- * absolutas — robô de preview não resolve caminho relativo.
- * Sem barra no final.
+ * O DOMÍNIO, NUM LUGAR SÓ. Sem barra no final.
+ *
+ * TODO (Etapa 8): trocar pelo domínio real. As URLs canônicas, as imagens de
+ * preview, o sitemap e os links das peças nas mensagens saem daqui.
+ * `npm run conferir` avisa enquanto ele for o endereço provisório da Vercel.
  */
 export const SITE_URL = 'https://carlos-oliveira-entalhes.vercel.app'
 
 /**
- * URL do perfil no Instagram, ou null enquanto não houver @ cadastrado.
- *
- * A cópia em `const` existe por causa do `as const` acima: sem ela o
- * TypeScript estreita `brand.instagram` para o literal `''` e conclui que o
- * ramo verdadeiro do ternário é inalcançável. Anotar como `string` devolve o
- * tipo largo e faz o dia em que o @ for preenchido continuar compilando.
+ * O código de verificação do Google Search Console (Etapa 8), só o valor do
+ * `content` da meta tag que o Search Console mostra no método "Tag HTML".
+ * Vazio não gera tag nenhuma. Verificar pelo DNS do domínio também serve,
+ * e aí isto fica vazio para sempre.
  */
-const instagram: string = brand.instagram
+export const VERIFICACAO_GOOGLE = ''
 
-export const linkInstagram: string | null = instagram
-  ? `https://instagram.com/${instagram.replace(/^@/, '')}`
-  : null
+/** URL do perfil a partir do @ salvo no painel, ou `null` enquanto não houver perfil. */
+export function linkDoInstagram(arroba: string): string | null {
+  const perfil = arroba.trim().replace(/^@/, '')
+  return perfil ? `https://instagram.com/${perfil}` : null
+}
 
 /**
- * Monta o link de conversa no WhatsApp com mensagem pré-preenchida.
+ * Monta o link de conversa no WhatsApp com a mensagem já escrita.
+ *
+ * O número vem das Configurações do painel (ver lib/dados/consultas.ts); o de
+ * `brand.whatsapp` é só o padrão enquanto o Carlos não preenche.
  *
  * @example
- * linkWhatsApp('Olá! Tenho interesse na peça Coruja.')
- * // → https://wa.me/5500000000000?text=Ol%C3%A1!%20Tenho%20interesse...
+ * linkWhatsApp('5522999999999', 'Olá! Tenho interesse na peça Coruja.')
  */
-export function linkWhatsApp(mensagem: string): string {
-  return `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(mensagem)}`
+export function linkWhatsApp(numero: string, mensagem: string): string {
+  return `https://wa.me/${numero.replace(/\D/g, '')}?text=${encodeURIComponent(mensagem)}`
 }

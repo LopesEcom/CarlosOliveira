@@ -51,16 +51,17 @@ export const videosBancada: VideoBancada[] = [
 /**
  * Falas do Carlos, intercaladas com as fotos no deslize.
  *
- * TODO: foram escritas a partir do que ele contou (a terapia, o bloco
- * maciço, as mais de trezentas peças), não ditas por ele. Vale ele reescrever
- * com as palavras dele: é o trecho da página que mais muda de tom quando a
- * voz é a própria.
+ * Tiradas da introdução do livro dele, "O Silêncio da Madeira e o Grito da
+ * Vida" (foto em imagens Carlos/livro-introducao.jpg). Trechos curtos e com
+ * as palavras dele; os cortes só tiram o que dependia do resto do
+ * parágrafo, sem trocar palavra dele.
  */
 export const falas = [
-  'Comecei a entalhar por terapia. Não parei mais.',
-  'Não uso molde, não uso resina, não colo. Cada peça sai de um bloco só.',
-  'Quem decide por onde a figura aparece é o veio da madeira.',
+  'Olhando hoje para as minhas mãos, vejo as cicatrizes e as vitórias de uma vida inteira dedicada à arte de transformar o bruto em belo.',
+  'Meu formão esculpiu mais do que madeira: esculpiu a minha própria cura.',
+  'Assim como um bloco de madeira bruta esconde uma obra de arte em seu interior, a nossa vida também exige que saibamos retirar os excessos.',
 ]
 
+/** A frase que fecha o deslize. É também a última linha da introdução. */
 export const FRASE_DA_CASA =
-  'Nenhuma peça é igual à outra, porque nenhuma madeira é igual à outra.'
+  'Enquanto houver madeira e fôlego, o formão nunca irá parar.'

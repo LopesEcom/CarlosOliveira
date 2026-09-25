@@ -1,3 +1,5 @@
+'use client'
+
 import { Fragment, type CSSProperties, type ElementType, type ReactNode } from 'react'
 
 import { useRevelar } from '../lib/movimento'

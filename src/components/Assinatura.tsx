@@ -1,88 +1,73 @@
+import Image from 'next/image'
+
 import { brand } from '../lib/brand'
 import { cn } from '../lib/utils'
 
 interface AssinaturaProps {
   /** Sobre foto ou fundo escuro. */
   clara?: boolean
-  /** `linha` para o alto da capa; `bloco` para o rodapé, centralizada. */
+  /** `linha` para o cabeçalho; `bloco` para o rodapé, maior e centralizada. */
   forma?: 'linha' | 'bloco'
   className?: string
 }
 
+/** Proporção da logo horizontal (símbolo, nome e ofício), largura/altura. */
+const PROPORCAO = 1200 / 294
+
 /**
- * A ASSINATURA, no lugar de uma logo que ainda não existe.
- * =========================================================
+ * A LOGO DO CARLOS.
+ * =================
  *
- * O Carlos não tem marca desenhada, e inventar um símbolo aqui seria decidir
- * por ele o que vai para cartão, etiqueta e placa. Então a assinatura é só o
- * nome, mas composto como marca e não como texto solto:
+ * O selo de anéis com o CO, o nome e "Escultor · Entalhador", na versão
+ * horizontal. Os arquivos saem de `marca/original/` pelo `scripts/marca.mjs`,
+ * sem o fundo branco e pintados nas duas cores do site.
  *
- *   SELO     as iniciais em itálico dentro de um quadrado de filete. O
- *            itálico da Fraunces tem o traço inclinado de goiva; o quadrado
- *            é o bloco de madeira de onde a letra sai.
- *   NOME     caixa alta com entreletra larga, o peso de placa gravada.
- *   OFÍCIO   em corpo pequeno, entre dois filetes curtos, como a linha de
- *            baixo de um carimbo.
+ * No cabeçalho as duas cores ficam empilhadas e trocam por opacidade: sobre
+ * a capa vale a creme, e ao rolar, quando o cabeçalho ganha fundo branco, a
+ * marrom aparece no mesmo compasso do fundo, sem piscar.
  *
- * Quando a logo chegar, é este componente que troca, e o resto do site não
- * percebe.
+ * O nome já está na imagem; o texto alternativo diz o nome uma vez, e só na
+ * versão visível.
  */
 export default function Assinatura({ clara = false, forma = 'linha', className }: AssinaturaProps) {
-  const cor = clara ? 'text-creme' : 'text-tinta'
-  const borda = clara ? 'border-creme/60' : 'border-tinta/60'
-  const filete = clara ? 'bg-creme/50' : 'bg-tinta/40'
-
-  const [primeiro, ...resto] = brand.nome.split(' ')
-  const iniciais = `${primeiro[0]}${resto.at(-1)?.[0] ?? ''}`
-
   if (forma === 'bloco') {
     return (
-      <div className={cn('flex flex-col items-center text-center', cor, className)}>
-        <Selo iniciais={iniciais} borda={borda} grande />
-        <p className="mt-7 font-display text-h3 font-light uppercase leading-none tracking-largo-lg">
-          {brand.nome}
-        </p>
-        <Oficio filete={filete} className="mt-4" />
-      </div>
+      <Image
+        src={clara ? '/marca/logo-creme.png' : '/marca/logo-tinta.png'}
+        alt={brand.nome}
+        width={1200}
+        height={294}
+        sizes="20rem"
+        className={cn('h-auto w-[17rem] md:w-[20rem]', className)}
+      />
     )
   }
 
-  return (
-    <div className={cn('flex items-center gap-4', cor, className)}>
-      <Selo iniciais={iniciais} borda={borda} />
-      <div className="min-w-0 leading-none">
-        <p className="truncate font-display text-h5 font-normal uppercase tracking-largo-lg">
-          {brand.nome}
-        </p>
-        <Oficio filete={filete} className="mt-2" alinhado />
-      </div>
-    </div>
-  )
-}
+  const classe = 'h-11 w-auto transition-opacity duration-500 ease-suave md:h-12'
+  const estilo = { aspectRatio: PROPORCAO }
 
-function Selo({ iniciais, borda, grande = false }: { iniciais: string; borda: string; grande?: boolean }) {
   return (
-    <span
-      aria-hidden
-      className={cn(
-        'inline-flex shrink-0 items-center justify-center border font-display font-light italic leading-none',
-        borda,
-        grande ? 'size-16 text-[1.9rem]' : 'size-11 text-[1.3rem]',
-      )}
-    >
-      {iniciais}
-    </span>
-  )
-}
-
-function Oficio({ filete, className, alinhado = false }: { filete: string; className?: string; alinhado?: boolean }) {
-  return (
-    <span className={cn('flex items-center gap-2.5', !alinhado && 'justify-center', className)}>
-      {!alinhado && <span aria-hidden className={cn('h-px w-6', filete)} />}
-      <span className="font-display text-[0.625rem] uppercase tracking-largo-lg rebaixado">
-        Escultor · Entalhador
-      </span>
-      <span aria-hidden className={cn('h-px w-6', filete)} />
+    <span className={cn('relative block', className)}>
+      <Image
+        src="/marca/logo-tinta.png"
+        alt={clara ? '' : brand.nome}
+        width={1200}
+        height={294}
+        priority
+        sizes="12rem"
+        style={estilo}
+        className={cn(classe, clara && 'opacity-0')}
+      />
+      <Image
+        src="/marca/logo-creme.png"
+        alt={clara ? brand.nome : ''}
+        width={1200}
+        height={294}
+        priority
+        sizes="12rem"
+        style={estilo}
+        className={cn(classe, 'absolute inset-0', !clara && 'opacity-0')}
+      />
     </span>
   )
 }

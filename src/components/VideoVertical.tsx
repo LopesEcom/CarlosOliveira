@@ -1,7 +1,9 @@
+'use client'
+
 import { Pause, Play } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
-import { movimentoReduzido } from '../lib/movimento'
+import { useMovimentoReduzido } from '../lib/movimento'
 import { cn } from '../lib/utils'
 
 interface VideoVerticalProps {
@@ -86,9 +88,9 @@ export default function VideoVertical({
   const [carregar, setCarregar] = useState(false)
   const [naTela, setNaTela] = useState(false)
   const [tocando, setTocando] = useState(true)
-  /* Decidido uma vez, na montagem: trocar de ideia no meio faria o vídeo
-     aparecer e sumir se a pessoa mudasse a preferência do sistema. */
-  const [semMovimento] = useState(movimentoReduzido)
+  /* Pelo hook, e não lido direto: a página sai pré-renderizada do build, e
+     o vídeo e o pôster são HTML diferentes (ver useMovimentoReduzido). */
+  const semMovimento = useMovimentoReduzido()
 
   /* O observador só responde uma coisa: está na tela ou não. */
   useEffect(() => {

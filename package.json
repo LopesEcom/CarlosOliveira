@@ -4,29 +4,36 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "oxlint",
+    "tipos": "tsc --noEmit",
+    "fotos": "node scripts/fotos.mjs",
+    "acervo": "node scripts/acervo.mjs",
+    "seed": "node scripts/gerar-seed.mjs",
     "webp": "node scripts/webp.mjs",
-    "preview": "vite preview"
+    "guia": "node fotos/guia/gerar.mjs",
+    "conferir": "node scripts/conferir-lancamento.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.117.1",
     "lucide-react": "^1.27.0",
+    "next": "^16.3.6",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1"
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
     "autoprefixer": "^10.5.4",
+    "exceljs": "^4.4.0",
     "oxlint": "^1.71.0",
     "postcss": "^8.5.23",
     "sharp": "^0.35.3",
     "tailwindcss": "^3.4.19",
-    "typescript": "~6.0.2",
-    "vite": "^8.1.1"
+    "typescript": "~6.0.2"
   }
 }

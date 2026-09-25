@@ -1,0 +1,1162 @@
+{
+  "geradoEm": "2026-09-25T06:09:40.562Z",
+  "colecoes": [
+    {
+      "id": "devocao",
+      "nome": "Devoção",
+      "descricao": "Imagens sacras e oratórios."
+    },
+    {
+      "id": "parede",
+      "nome": "Para a parede",
+      "descricao": "Painéis em relevo, relógios e molduras."
+    },
+    {
+      "id": "mesa-e-estante",
+      "nome": "Para a mesa e a estante",
+      "descricao": "Esculturas de vulto, que ficam em pé."
+    }
+  ],
+  "pecas": [
+    {
+      "id": "0002-coruja",
+      "numero": "0002",
+      "slug": "coruja",
+      "nome": "Coruja",
+      "categoria": "fauna",
+      "descricao": "Peça de bancada, cada pena entalhada uma a uma",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0002-coruja/capa-1200.webp",
+        "srcsetWebp": "/acervo/0002-coruja/capa-600.webp 600w, /acervo/0002-coruja/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0002-coruja/capa-600.avif 600w, /acervo/0002-coruja/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBadBDd9VuVHcDk4EAD+7Uheq50S1ze3HpH5LSMsdXkBGl14iQDqBPKAg+E18Sd33AOwqkO/rJ2Da/2KdKo+3I3WWjVzgzEjC9cR2K32uCylNcyCHYEAAAA=",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0002-coruja/01-2000.webp",
+          "srcsetWebp": "/acervo/0002-coruja/01-640.webp 640w, /acervo/0002-coruja/01-1280.webp 1280w, /acervo/0002-coruja/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0002-coruja/01-640.avif 640w, /acervo/0002-coruja/01-1280.avif 1280w, /acervo/0002-coruja/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        },
+        {
+          "src": "/acervo/0002-coruja/02-2000.webp",
+          "srcsetWebp": "/acervo/0002-coruja/02-640.webp 640w, /acervo/0002-coruja/02-1280.webp 1280w, /acervo/0002-coruja/02-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0002-coruja/02-640.avif 640w, /acervo/0002-coruja/02-1280.avif 1280w, /acervo/0002-coruja/02-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0003-aguia",
+      "numero": "0003",
+      "slug": "aguia",
+      "nome": "Águia",
+      "categoria": "fauna",
+      "descricao": "Asas abertas sobre base de tronco, tirada de um bloco só",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0003-aguia/capa-1200.webp",
+        "srcsetWebp": "/acervo/0003-aguia/capa-600.webp 600w, /acervo/0003-aguia/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0003-aguia/capa-600.avif 600w, /acervo/0003-aguia/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JQBOmUABp1gaSeOnaPiAA/up2HeNjMjNUpXFWl/Pxt8MmObZqcXvVA4yGc7OmLN3mNyqGGS398hohtTWn6NrWptZuZC5qjIAAAA==",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0003-aguia/01-2000.webp",
+          "srcsetWebp": "/acervo/0003-aguia/01-640.webp 640w, /acervo/0003-aguia/01-1280.webp 1280w, /acervo/0003-aguia/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0003-aguia/01-640.avif 640w, /acervo/0003-aguia/01-1280.avif 1280w, /acervo/0003-aguia/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0004-cristo-coroa-de-espinhos",
+      "numero": "0004",
+      "slug": "cristo-coroa-de-espinhos",
+      "nome": "Cristo, coroa de espinhos",
+      "categoria": "sacra",
+      "descricao": "Busto em madeira clara, cabelo e coroa entalhados a fundo",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "devocao",
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0004-cristo-coroa-de-espinhos/capa-1200.webp",
+        "srcsetWebp": "/acervo/0004-cristo-coroa-de-espinhos/capa-600.webp 600w, /acervo/0004-cristo-coroa-de-espinhos/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0004-cristo-coroa-de-espinhos/capa-600.avif 600w, /acervo/0004-cristo-coroa-de-espinhos/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JaACdMoADS3xhP+XedavX3UDAAP7qj9lwBTJplQ9PHDLLvG6Jeb1CLm1VMa7KutdKDFSdnZ2Bhv3laOvFEJQZ8Q6SRoh6BJp0lDzyhtpqA53HGZ8qjOsjpPcNNQeYAAA=",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0004-cristo-coroa-de-espinhos/01-2000.webp",
+          "srcsetWebp": "/acervo/0004-cristo-coroa-de-espinhos/01-640.webp 640w, /acervo/0004-cristo-coroa-de-espinhos/01-1280.webp 1280w, /acervo/0004-cristo-coroa-de-espinhos/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0004-cristo-coroa-de-espinhos/01-640.avif 640w, /acervo/0004-cristo-coroa-de-espinhos/01-1280.avif 1280w, /acervo/0004-cristo-coroa-de-espinhos/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0005-nossa-senhora",
+      "numero": "0005",
+      "slug": "nossa-senhora",
+      "nome": "Nossa Senhora",
+      "categoria": "sacra",
+      "descricao": "Imagem de vulto sobre nuvens, mãos cruzadas ao peito",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "devocao",
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0005-nossa-senhora/capa-1200.webp",
+        "srcsetWebp": "/acervo/0005-nossa-senhora/capa-600.webp 600w, /acervo/0005-nossa-senhora/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0005-nossa-senhora/capa-600.avif 600w, /acervo/0005-nossa-senhora/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdAB6LpaDQr0/vgAD+6yXqxsMu1oF7bNVbfyMIdNcLZ1U4FF0ww9dr4fYfj4HbdclgD5x7T3KhU1WXYwZg1l5nkNTjGNtj5iBtvcnYKUUBuXbz0+i3oAA=",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0005-nossa-senhora/01-2000.webp",
+          "srcsetWebp": "/acervo/0005-nossa-senhora/01-640.webp 640w, /acervo/0005-nossa-senhora/01-1280.webp 1280w, /acervo/0005-nossa-senhora/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0005-nossa-senhora/01-640.avif 640w, /acervo/0005-nossa-senhora/01-1280.avif 1280w, /acervo/0005-nossa-senhora/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0006-oratorio-gotico",
+      "numero": "0006",
+      "slug": "oratorio-gotico",
+      "nome": "Oratório gótico",
+      "categoria": "sacra",
+      "descricao": "Capela de mesa com arcos ogivais, pináculos e imagem interna",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "devocao",
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0006-oratorio-gotico/capa-1200.webp",
+        "srcsetWebp": "/acervo/0006-oratorio-gotico/capa-600.webp 600w, /acervo/0006-oratorio-gotico/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0006-oratorio-gotico/capa-600.avif 600w, /acervo/0006-oratorio-gotico/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdMoADTrnl/0fOnA2qKCAA/u1HmJshu/iexnx5jl7OeqrdUFri9AcSOFKcRdUhNRPoGp+IMZ9xF8oJ5RiQwZzv+JHSTpPG1CtwLzLl21p01e+zD8j9luVdfl/wNAAAAA==",
+        "cor": "#f8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0006-oratorio-gotico/01-2000.webp",
+          "srcsetWebp": "/acervo/0006-oratorio-gotico/01-640.webp 640w, /acervo/0006-oratorio-gotico/01-1280.webp 1280w, /acervo/0006-oratorio-gotico/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0006-oratorio-gotico/01-640.avif 640w, /acervo/0006-oratorio-gotico/01-1280.avif 1280w, /acervo/0006-oratorio-gotico/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        },
+        {
+          "src": "/acervo/0006-oratorio-gotico/02-2000.webp",
+          "srcsetWebp": "/acervo/0006-oratorio-gotico/02-640.webp 640w, /acervo/0006-oratorio-gotico/02-1280.webp 1280w, /acervo/0006-oratorio-gotico/02-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0006-oratorio-gotico/02-640.avif 640w, /acervo/0006-oratorio-gotico/02-1280.avif 1280w, /acervo/0006-oratorio-gotico/02-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0007-santa-ceia",
+      "numero": "0007",
+      "slug": "santa-ceia",
+      "nome": "Santa Ceia",
+      "categoria": "sacra",
+      "descricao": "Painel em alto-relevo, treze figuras sobre parede de pedra",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "devocao",
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0007-santa-ceia/capa-1200.webp",
+        "srcsetWebp": "/acervo/0007-santa-ceia/capa-600.webp 600w, /acervo/0007-santa-ceia/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0007-santa-ceia/capa-600.avif 600w, /acervo/0007-santa-ceia/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZQC7ACHf5AAvswAA/upukO6o6gKBEs6Zi8hJ22Ey335HodPgqy6W9GfjTpfZXHYkAAAA",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0007-santa-ceia/01-2000.webp",
+          "srcsetWebp": "/acervo/0007-santa-ceia/01-640.webp 640w, /acervo/0007-santa-ceia/01-1280.webp 1280w, /acervo/0007-santa-ceia/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0007-santa-ceia/01-640.avif 640w, /acervo/0007-santa-ceia/01-1280.avif 1280w, /acervo/0007-santa-ceia/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0008-relogio-dos-cavalos",
+      "numero": "0008",
+      "slug": "relogio-dos-cavalos",
+      "nome": "Relógio dos cavalos",
+      "categoria": "utilitaria",
+      "descricao": "Painel em alto-relevo com dois cavalos e mostrador ao centro",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0008-relogio-dos-cavalos/capa-1200.webp",
+        "srcsetWebp": "/acervo/0008-relogio-dos-cavalos/capa-600.webp 600w, /acervo/0008-relogio-dos-cavalos/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0008-relogio-dos-cavalos/capa-600.avif 600w, /acervo/0008-relogio-dos-cavalos/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZgCdMoADTdZdkmn5XXqLgAD+7T0v5FFfqJfNv3Q1wvbc5cQJOxzt0KuN6J/eJSOdeKxxxqphz+WptedB/LBTr81uaYoHzJzZSHR+XFsAGFWAHozxTImUpQAAAA==",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0008-relogio-dos-cavalos/01-2000.webp",
+          "srcsetWebp": "/acervo/0008-relogio-dos-cavalos/01-640.webp 640w, /acervo/0008-relogio-dos-cavalos/01-1280.webp 1280w, /acervo/0008-relogio-dos-cavalos/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0008-relogio-dos-cavalos/01-640.avif 640w, /acervo/0008-relogio-dos-cavalos/01-1280.avif 1280w, /acervo/0008-relogio-dos-cavalos/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0009-bau-entalhado",
+      "numero": "0009",
+      "slug": "bau-entalhado",
+      "nome": "Baú entalhado",
+      "categoria": "utilitaria",
+      "descricao": "Tampa abaulada, flores em relevo na frente e nas laterais",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [],
+      "capa": {
+        "src": "/acervo/0009-bau-entalhado/capa-1200.webp",
+        "srcsetWebp": "/acervo/0009-bau-entalhado/capa-600.webp 600w, /acervo/0009-bau-entalhado/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0009-bau-entalhado/capa-600.avif 600w, /acervo/0009-bau-entalhado/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JZACdMoADTdfzqeu8IPEYAP7vwlhEwMJsewLz7KwXcaB1kntTcEN0/r+p692FQn0pzOyGqb4ctSgzbHgwuj+AAAA=",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0009-bau-entalhado/01-2000.webp",
+          "srcsetWebp": "/acervo/0009-bau-entalhado/01-640.webp 640w, /acervo/0009-bau-entalhado/01-1280.webp 1280w, /acervo/0009-bau-entalhado/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0009-bau-entalhado/01-640.avif 640w, /acervo/0009-bau-entalhado/01-1280.avif 1280w, /acervo/0009-bau-entalhado/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0010-moldura-de-folhagem",
+      "numero": "0010",
+      "slug": "moldura-de-folhagem",
+      "nome": "Moldura de folhagem",
+      "categoria": "utilitaria",
+      "descricao": "Moldura vazada, folhas e volutas nos quatro cantos",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0010-moldura-de-folhagem/capa-1200.webp",
+        "srcsetWebp": "/acervo/0010-moldura-de-folhagem/capa-600.webp 600w, /acervo/0010-moldura-de-folhagem/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0010-moldura-de-folhagem/capa-600.avif 600w, /acervo/0010-moldura-de-folhagem/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZAC7ACKVzkrHsQtyOAAA/uCrnqdtEjNTfSEOkdyPDKI5KfkY6yYE9nWpoYskPWedLhxik9av/IdTv+kGZWOuuRvmDtW70Suw062OX2XgAA==",
+        "cor": "#d8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0010-moldura-de-folhagem/01-1280.webp",
+          "srcsetWebp": "/acervo/0010-moldura-de-folhagem/01-640.webp 640w, /acervo/0010-moldura-de-folhagem/01-1280.webp 1280w",
+          "srcsetAvif": "/acervo/0010-moldura-de-folhagem/01-640.avif 640w, /acervo/0010-moldura-de-folhagem/01-1280.avif 1280w",
+          "largura": 1087,
+          "altura": 1446
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0011-face-de-cristo",
+      "numero": "0011",
+      "slug": "face-de-cristo",
+      "nome": "Face de Cristo",
+      "categoria": "sacra",
+      "descricao": "Coluna entalhada, traço estilizado e simétrico",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "devocao",
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0011-face-de-cristo/capa-1200.webp",
+        "srcsetWebp": "/acervo/0011-face-de-cristo/capa-600.webp 600w, /acervo/0011-face-de-cristo/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0011-face-de-cristo/capa-600.avif 600w, /acervo/0011-face-de-cristo/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADQAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JQBWAAx2CEAoszBIBCgAA/vHgqDh76aqoGEAgxaqbbLtjIUfTcg07Gbff0l2T6i9nBOCujgOoQqdOtvtyfKUL6NpVkXnJkLo4plZbeOZ+9Gbei1Y8HC7Pra5oAAAA",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0011-face-de-cristo/01-2000.webp",
+          "srcsetWebp": "/acervo/0011-face-de-cristo/01-640.webp 640w, /acervo/0011-face-de-cristo/01-1280.webp 1280w, /acervo/0011-face-de-cristo/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0011-face-de-cristo/01-640.avif 640w, /acervo/0011-face-de-cristo/01-1280.avif 1280w, /acervo/0011-face-de-cristo/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0012-santa-ceia-ornamentada",
+      "numero": "0012",
+      "slug": "santa-ceia-ornamentada",
+      "nome": "Santa Ceia ornamentada",
+      "categoria": "sacra",
+      "descricao": "A mesma cena com moldura vazada de folhagem entalhada",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "devocao",
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0012-santa-ceia-ornamentada/capa-1200.webp",
+        "srcsetWebp": "/acervo/0012-santa-ceia-ornamentada/capa-600.webp 600w, /acervo/0012-santa-ceia-ornamentada/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0012-santa-ceia-ornamentada/capa-600.avif 600w, /acervo/0012-santa-ceia-ornamentada/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYwC7ACHf4/z/A32iAP7tN7Y6m0wZJKdEP9Y8NfHu9l+p0cDjMD826jm4u2xPe09POcUsgAA=",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0012-santa-ceia-ornamentada/01-2000.webp",
+          "srcsetWebp": "/acervo/0012-santa-ceia-ornamentada/01-640.webp 640w, /acervo/0012-santa-ceia-ornamentada/01-1280.webp 1280w, /acervo/0012-santa-ceia-ornamentada/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0012-santa-ceia-ornamentada/01-640.avif 640w, /acervo/0012-santa-ceia-ornamentada/01-1280.avif 1280w, /acervo/0012-santa-ceia-ornamentada/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0013-santa-das-maos-postas",
+      "numero": "0013",
+      "slug": "santa-das-maos-postas",
+      "nome": "Santa das mãos postas",
+      "categoria": "sacra",
+      "descricao": "Imagem de vulto em madeira clara, manto em pregas longas",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "devocao",
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0013-santa-das-maos-postas/capa-1200.webp",
+        "srcsetWebp": "/acervo/0013-santa-das-maos-postas/capa-600.webp 600w, /acervo/0013-santa-das-maos-postas/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0013-santa-das-maos-postas/capa-600.avif 600w, /acervo/0013-santa-das-maos-postas/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOgA3RwBxGXZ42AAP7qlvuFVcrXTT4Albzk25q5wyP3+neUhk1pJr7eGVlY0GfWMiqms/WW41hY6lN09RbEAAA=",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0013-santa-das-maos-postas/01-640.webp",
+          "srcsetWebp": "/acervo/0013-santa-das-maos-postas/01-640.webp 640w",
+          "srcsetAvif": "/acervo/0013-santa-das-maos-postas/01-640.avif 640w",
+          "largura": 1024,
+          "altura": 1024
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0014-santa-do-manto",
+      "numero": "0014",
+      "slug": "santa-do-manto",
+      "nome": "Santa do manto",
+      "categoria": "sacra",
+      "descricao": "Imagem de vulto em madeira avermelhada, manto em torção",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "devocao",
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0014-santa-do-manto/capa-1200.webp",
+        "srcsetWebp": "/acervo/0014-santa-do-manto/capa-600.webp 600w, /acervo/0014-santa-do-manto/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0014-santa-do-manto/capa-600.avif 600w, /acervo/0014-santa-do-manto/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JQBOkGxBe2g6CFAGxnENkAP7tXx8z7JM2t9xIiGY50qvQ4Fu7LOcaM5O1Khl31rKrlq1Mjqsps42PNHKMQvaoGEUxGQZuZKY4tb8pZr8FEhgA",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0014-santa-do-manto/01-2000.webp",
+          "srcsetWebp": "/acervo/0014-santa-do-manto/01-640.webp 640w, /acervo/0014-santa-do-manto/01-1280.webp 1280w, /acervo/0014-santa-do-manto/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0014-santa-do-manto/01-640.avif 640w, /acervo/0014-santa-do-manto/01-1280.avif 1280w, /acervo/0014-santa-do-manto/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0015-coruja-e-face",
+      "numero": "0015",
+      "slug": "coruja-e-face",
+      "nome": "Coruja e face",
+      "categoria": "fauna",
+      "descricao": "Duas leituras no mesmo bloco: a ave em cima, o rosto embaixo",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0015-coruja-e-face/capa-1200.webp",
+        "srcsetWebp": "/acervo/0015-coruja-e-face/capa-600.webp 600w, /acervo/0015-coruja-e-face/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0015-coruja-e-face/capa-600.avif 600w, /acervo/0015-coruja-e-face/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JQBOgA3SQEdsQhA5UwAD+6yds918BukDa+a8yLxGM6siCVGuWq0JyO5hh7xE0GM4BqaKLZn/kypx/vVa4ZpdHTGlscGS0Z8pWAAAA",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0015-coruja-e-face/01-2000.webp",
+          "srcsetWebp": "/acervo/0015-coruja-e-face/01-640.webp 640w, /acervo/0015-coruja-e-face/01-1280.webp 1280w, /acervo/0015-coruja-e-face/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0015-coruja-e-face/01-640.avif 640w, /acervo/0015-coruja-e-face/01-1280.avif 1280w, /acervo/0015-coruja-e-face/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0016-coruja-ao-luar",
+      "numero": "0016",
+      "slug": "coruja-ao-luar",
+      "nome": "Coruja ao luar",
+      "categoria": "fauna",
+      "descricao": "Painel em relevo, ave no galho e a lua cheia ao fundo",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0016-coruja-ao-luar/capa-1200.webp",
+        "srcsetWebp": "/acervo/0016-coruja-ao-luar/capa-600.webp 600w, /acervo/0016-coruja-ao-luar/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0016-coruja-ao-luar/capa-600.avif 600w, /acervo/0016-coruja-ao-luar/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoQABUAPu1iqU2ppaQiMAgBMB2JZACdMoADTgx4UjF4f/7gNQAA/urTS5j1zIc6z5wQvkHDSp+7PMsUFHF1qKDhN1DxesMj5O+KNDHq8on+PNzEAAA=",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0016-coruja-ao-luar/01-2000.webp",
+          "srcsetWebp": "/acervo/0016-coruja-ao-luar/01-640.webp 640w, /acervo/0016-coruja-ao-luar/01-1280.webp 1280w, /acervo/0016-coruja-ao-luar/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0016-coruja-ao-luar/01-640.avif 640w, /acervo/0016-coruja-ao-luar/01-1280.avif 1280w, /acervo/0016-coruja-ao-luar/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0017-peixes",
+      "numero": "0017",
+      "slug": "peixes",
+      "nome": "Peixes",
+      "categoria": "fauna",
+      "descricao": "Painel em relevo com cardume, juncos e superfície da água",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0017-peixes/capa-1200.webp",
+        "srcsetWebp": "/acervo/0017-peixes/capa-600.webp 600w, /acervo/0017-peixes/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0017-peixes/capa-600.avif 600w, /acervo/0017-peixes/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwBACdASoQABUAPu1kqU2ppaQiMAgBMB2JbACdMoADTuLlP/COdha8LgAA/u/OZRcCfQzdUGDqolC+QiBMxFHN7oJ++S88T1+JQJMbirnlf3Wj7PsGeDkUmTaeLsAA",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0017-peixes/01-2000.webp",
+          "srcsetWebp": "/acervo/0017-peixes/01-640.webp 640w, /acervo/0017-peixes/01-1280.webp 1280w, /acervo/0017-peixes/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0017-peixes/01-640.avif 640w, /acervo/0017-peixes/01-1280.avif 1280w, /acervo/0017-peixes/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0019-serpente-e-espada",
+      "numero": "0019",
+      "slug": "serpente-e-espada",
+      "nome": "Serpente e espada",
+      "categoria": "fauna",
+      "descricao": "Painel em relevo, corpo enrolado ao longo da lâmina",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0019-serpente-e-espada/capa-1200.webp",
+        "srcsetWebp": "/acervo/0019-serpente-e-espada/capa-600.webp 600w, /acervo/0019-serpente-e-espada/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0019-serpente-e-espada/capa-600.avif 600w, /acervo/0019-serpente-e-espada/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABUAPu1kqk4ppaQiMAgBMB2JZACdMoR3ACnbKvs5j/z74AD+4c+Hyas4u6GY14l3bCM2Z6oJjK4AybO9RC5nFBe3QLBeoXSDAU5GwaNry2DuWgEDRRR9qQAAAA==",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0019-serpente-e-espada/01-2000.webp",
+          "srcsetWebp": "/acervo/0019-serpente-e-espada/01-640.webp 640w, /acervo/0019-serpente-e-espada/01-1280.webp 1280w, /acervo/0019-serpente-e-espada/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0019-serpente-e-espada/01-640.avif 640w, /acervo/0019-serpente-e-espada/01-1280.avif 1280w, /acervo/0019-serpente-e-espada/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0020-mulher-do-chapeu",
+      "numero": "0020",
+      "slug": "mulher-do-chapeu",
+      "nome": "Mulher do chapéu",
+      "categoria": "figura",
+      "descricao": "Figura de vulto, vestido longo e mão na aba do chapéu",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0020-mulher-do-chapeu/capa-1200.webp",
+        "srcsetWebp": "/acervo/0020-mulher-do-chapeu/capa-600.webp 600w, /acervo/0020-mulher-do-chapeu/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0020-mulher-do-chapeu/capa-600.avif 600w, /acervo/0020-mulher-do-chapeu/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoQABUAPu1kqk4ppaQiMAgBMB2JYwCdABugsCUswn0gAAD+6GCFa5U3H2/MgK9Zi1tFzqXRS0h1WIE1a1LXujah6B+kPcfL2lBW2HIN6n6OHmOSUlIVeQTLA1R/dgMMQAA=",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0020-mulher-do-chapeu/01-2000.webp",
+          "srcsetWebp": "/acervo/0020-mulher-do-chapeu/01-640.webp 640w, /acervo/0020-mulher-do-chapeu/01-1280.webp 1280w, /acervo/0020-mulher-do-chapeu/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0020-mulher-do-chapeu/01-640.avif 640w, /acervo/0020-mulher-do-chapeu/01-1280.avif 1280w, /acervo/0020-mulher-do-chapeu/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0021-perfil-feminino",
+      "numero": "0021",
+      "slug": "perfil-feminino",
+      "nome": "Perfil feminino",
+      "categoria": "figura",
+      "descricao": "Baixo-relevo em painel, cabelo resolvido em ondas largas",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0021-perfil-feminino/capa-1200.webp",
+        "srcsetWebp": "/acervo/0021-perfil-feminino/capa-600.webp 600w, /acervo/0021-perfil-feminino/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0021-perfil-feminino/capa-600.avif 600w, /acervo/0021-perfil-feminino/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBUehDv7/llPpmlYYAD+7Tdp23STNQfFabFRK8TFNnsFIrHUlSxvod4AAA==",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0021-perfil-feminino/01-2000.webp",
+          "srcsetWebp": "/acervo/0021-perfil-feminino/01-640.webp 640w, /acervo/0021-perfil-feminino/01-1280.webp 1280w, /acervo/0021-perfil-feminino/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0021-perfil-feminino/01-640.avif 640w, /acervo/0021-perfil-feminino/01-1280.avif 1280w, /acervo/0021-perfil-feminino/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0022-rosto-na-tora",
+      "numero": "0022",
+      "slug": "rosto-na-tora",
+      "nome": "Rosto na tora",
+      "categoria": "figura",
+      "descricao": "Relevo aberto na tora com casca, aproveitando o nó da madeira",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0022-rosto-na-tora/capa-1200.webp",
+        "srcsetWebp": "/acervo/0022-rosto-na-tora/capa-600.webp 600w, /acervo/0022-rosto-na-tora/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0022-rosto-na-tora/capa-600.avif 600w, /acervo/0022-rosto-na-tora/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUABprORaaMVDkRIvCAD+5xXN+xw4fvnbuhxoKZ+g8lI+oALWbeiagDa0k6oiHwINHzvVZyhv5JJNDbQ0TDXhCai1+Odgkc/nGGp+gJznaaj7ZeEU7W1QYChhQAA=",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0022-rosto-na-tora/01-2000.webp",
+          "srcsetWebp": "/acervo/0022-rosto-na-tora/01-640.webp 640w, /acervo/0022-rosto-na-tora/01-1280.webp 1280w, /acervo/0022-rosto-na-tora/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0022-rosto-na-tora/01-640.avif 640w, /acervo/0022-rosto-na-tora/01-1280.avif 1280w, /acervo/0022-rosto-na-tora/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0023-mascara",
+      "numero": "0023",
+      "slug": "mascara",
+      "nome": "Máscara",
+      "categoria": "figura",
+      "descricao": "Vulto frontal de traço geométrico, boca e olhos vazados",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0023-mascara/capa-1200.webp",
+        "srcsetWebp": "/acervo/0023-mascara/capa-600.webp 600w, /acervo/0023-mascara/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0023-mascara/capa-600.avif 600w, /acervo/0023-mascara/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAwCdASoQABUAPu1kq04ppaQiMAgBMB2JQBOgBHnVGNukqggsSIAA/u3Wqt+NkQJOP4hlHyqNG8fDij5WgC3FC+28nsXtFeuEtBx0rFHfQaxL3f9TUFxfplnXm7JTKfFeTqKaAAA=",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0023-mascara/01-2000.webp",
+          "srcsetWebp": "/acervo/0023-mascara/01-640.webp 640w, /acervo/0023-mascara/01-1280.webp 1280w, /acervo/0023-mascara/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0023-mascara/01-640.avif 640w, /acervo/0023-mascara/01-1280.avif 1280w, /acervo/0023-mascara/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0024-figura-de-pe",
+      "numero": "0024",
+      "slug": "figura-de-pe",
+      "nome": "Figura de pé",
+      "categoria": "figura",
+      "descricao": "Vulto esguio em madeira escura, braço erguido e pano ao corpo",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0024-figura-de-pe/capa-1200.webp",
+        "srcsetWebp": "/acervo/0024-figura-de-pe/capa-600.webp 600w, /acervo/0024-figura-de-pe/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0024-figura-de-pe/capa-600.avif 600w, /acervo/0024-figura-de-pe/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAwCdASoQABUAPu1kqU2ppaQiMAgBMB2JZQC+SCHgJVjOiPnVQAD+7UeZ4/xgORIvVJSzZACgI0e/o1IpP58xK+0eZ85UI8VH7UV6zpdT+8auBL9NYgAA",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0024-figura-de-pe/01-2000.webp",
+          "srcsetWebp": "/acervo/0024-figura-de-pe/01-640.webp 640w, /acervo/0024-figura-de-pe/01-1280.webp 1280w, /acervo/0024-figura-de-pe/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0024-figura-de-pe/01-640.avif 640w, /acervo/0024-figura-de-pe/01-1280.avif 1280w, /acervo/0024-figura-de-pe/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0025-figura-com-manto",
+      "numero": "0025",
+      "slug": "figura-com-manto",
+      "nome": "Figura com manto",
+      "categoria": "figura",
+      "descricao": "Vulto de pé com pano cruzado, entalhado em bloco único",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0025-figura-com-manto/capa-1200.webp",
+        "srcsetWebp": "/acervo/0025-figura-com-manto/capa-600.webp 600w, /acervo/0025-figura-com-manto/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0025-figura-com-manto/capa-600.avif 600w, /acervo/0025-figura-com-manto/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAwCdASoQABUAPu1kqU2ppaQiMAgBMB2JZwCdABuka1z/AXWh8oAA/u1hFPsJDpMaXr+visOOjOLHIOpcbsyhL8dzubVhmfPzcaSd+VIXqQpnVJrzVaH6YaAAAA==",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0025-figura-com-manto/01-2000.webp",
+          "srcsetWebp": "/acervo/0025-figura-com-manto/01-640.webp 640w, /acervo/0025-figura-com-manto/01-1280.webp 1280w, /acervo/0025-figura-com-manto/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0025-figura-com-manto/01-640.avif 640w, /acervo/0025-figura-com-manto/01-1280.avif 1280w, /acervo/0025-figura-com-manto/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0026-rosa",
+      "numero": "0026",
+      "slug": "rosa",
+      "nome": "Rosa",
+      "categoria": "natureza",
+      "descricao": "Flor aberta sobre haste, pétala por pétala, em base de tronco",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": true,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0026-rosa/capa-1200.webp",
+        "srcsetWebp": "/acervo/0026-rosa/capa-600.webp 600w, /acervo/0026-rosa/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0026-rosa/capa-600.avif 600w, /acervo/0026-rosa/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUAS1Qi6f5fRrSPTEAAD+7WEWMLqK9SO1tEvY/jMIp6RJiDFv8uLpEJbHOgSZx4IzA7vXNJz8UxHavV/68HZLIp/M7SoI+LZtEAA=",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0026-rosa/01-2000.webp",
+          "srcsetWebp": "/acervo/0026-rosa/01-640.webp 640w, /acervo/0026-rosa/01-1280.webp 1280w, /acervo/0026-rosa/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0026-rosa/01-640.avif 640w, /acervo/0026-rosa/01-1280.avif 1280w, /acervo/0026-rosa/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0027-girassol",
+      "numero": "0027",
+      "slug": "girassol",
+      "nome": "Girassol",
+      "categoria": "natureza",
+      "descricao": "Painel em relevo, miolo trabalhado em grão fino",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0027-girassol/capa-1200.webp",
+        "srcsetWebp": "/acervo/0027-girassol/capa-600.webp 600w, /acervo/0027-girassol/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0027-girassol/capa-600.avif 600w, /acervo/0027-girassol/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBACdASoQABUAPu1iqU2ppaQiMAgBMB2JaACdMoADSwMwX3xNDK3nCgAA/uuFSeL23ZxDh78+WdtnN8e0taWooa3R4872kjEbv8VuJeNZ12nMsOemVw57+S5Yb98aWh7uJlQLcKbDGAAA",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0027-girassol/01-2000.webp",
+          "srcsetWebp": "/acervo/0027-girassol/01-640.webp 640w, /acervo/0027-girassol/01-1280.webp 1280w, /acervo/0027-girassol/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0027-girassol/01-640.avif 640w, /acervo/0027-girassol/01-1280.avif 1280w, /acervo/0027-girassol/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0028-lua",
+      "numero": "0028",
+      "slug": "lua",
+      "nome": "Lua",
+      "categoria": "natureza",
+      "descricao": "Painel estreito em relevo, figura recostada no quarto crescente",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0028-lua/capa-1200.webp",
+        "srcsetWebp": "/acervo/0028-lua/capa-600.webp 600w, /acervo/0028-lua/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0028-lua/capa-600.avif 600w, /acervo/0028-lua/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JZwAAUV5cbXz7XyAA/u1TMDqq7qLq2Lr9FwFk2bKwdUGROua8DjRCszKY6e7p6bivf2/uQCqZ7lb/LCP7RPQ778AAAA==",
+        "cor": "#e8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0028-lua/01-2000.webp",
+          "srcsetWebp": "/acervo/0028-lua/01-640.webp 640w, /acervo/0028-lua/01-1280.webp 1280w, /acervo/0028-lua/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0028-lua/01-640.avif 640w, /acervo/0028-lua/01-1280.avif 1280w, /acervo/0028-lua/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0029-relogio-cabeca-de-cavalo",
+      "numero": "0029",
+      "slug": "relogio-cabeca-de-cavalo",
+      "nome": "Relógio cabeça de cavalo",
+      "categoria": "utilitaria",
+      "descricao": "Peça de parede recortada, crina entalhada em mechas soltas",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0029-relogio-cabeca-de-cavalo/capa-1200.webp",
+        "srcsetWebp": "/acervo/0029-relogio-cabeca-de-cavalo/capa-600.webp 600w, /acervo/0029-relogio-cabeca-de-cavalo/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0029-relogio-cabeca-de-cavalo/capa-600.avif 600w, /acervo/0029-relogio-cabeca-de-cavalo/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBOmUABWsMktbo+zmAD+50DEiGA6qDLP6TaOtErqfT3fTzPhzJQ2gw9rSwPr7T7EdOl03MDHKpj0e+l1e5/ND9qaqAzS4ObiVIeJq80eukcz+653oiJ0E5LwAA==",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0029-relogio-cabeca-de-cavalo/01-2000.webp",
+          "srcsetWebp": "/acervo/0029-relogio-cabeca-de-cavalo/01-640.webp 640w, /acervo/0029-relogio-cabeca-de-cavalo/01-1280.webp 1280w, /acervo/0029-relogio-cabeca-de-cavalo/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0029-relogio-cabeca-de-cavalo/01-640.avif 640w, /acervo/0029-relogio-cabeca-de-cavalo/01-1280.avif 1280w, /acervo/0029-relogio-cabeca-de-cavalo/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0030-relogio-de-parede",
+      "numero": "0030",
+      "slug": "relogio-de-parede",
+      "nome": "Relógio de parede",
+      "categoria": "utilitaria",
+      "descricao": "Caixa vazada com volutas e coroamento entalhado",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0030-relogio-de-parede/capa-1200.webp",
+        "srcsetWebp": "/acervo/0030-relogio-de-parede/capa-600.webp 600w, /acervo/0030-relogio-de-parede/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0030-relogio-de-parede/capa-600.avif 600w, /acervo/0030-relogio-de-parede/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JQBOmUABWgVM+l9te20AA/uc7rVUV3Of/BzZvwz4A0AQyetvo4blEDUHOrNPmFsnaCj1mAX9acaZriv/+Ad8ImOdbUTuQoecD8f8vtunwAA==",
+        "cor": "#d8d8c8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0030-relogio-de-parede/01-2000.webp",
+          "srcsetWebp": "/acervo/0030-relogio-de-parede/01-640.webp 640w, /acervo/0030-relogio-de-parede/01-1280.webp 1280w, /acervo/0030-relogio-de-parede/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0030-relogio-de-parede/01-640.avif 640w, /acervo/0030-relogio-de-parede/01-1280.avif 1280w, /acervo/0030-relogio-de-parede/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0031-moldura-de-arabescos",
+      "numero": "0031",
+      "slug": "moldura-de-arabescos",
+      "nome": "Moldura de arabescos",
+      "categoria": "utilitaria",
+      "descricao": "Moldura em madeira clara, desenho contínuo em toda a volta",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0031-moldura-de-arabescos/capa-1200.webp",
+        "srcsetWebp": "/acervo/0031-moldura-de-arabescos/capa-600.webp 600w, /acervo/0031-moldura-de-arabescos/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0031-moldura-de-arabescos/capa-600.avif 600w, /acervo/0031-moldura-de-arabescos/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdMoADTuN0yvvH4T/LQ4AA/u0/CGS2fIwnb5rTotp6Jb5Fx23w+1bIxJJmmO/MaL5dX4gAOWuuK/nRwh1LcBnkAA==",
+        "cor": "#e8e8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0031-moldura-de-arabescos/01-2000.webp",
+          "srcsetWebp": "/acervo/0031-moldura-de-arabescos/01-640.webp 640w, /acervo/0031-moldura-de-arabescos/01-1280.webp 1280w, /acervo/0031-moldura-de-arabescos/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0031-moldura-de-arabescos/01-640.avif 640w, /acervo/0031-moldura-de-arabescos/01-1280.avif 1280w, /acervo/0031-moldura-de-arabescos/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0032-moldura-com-coroamento",
+      "numero": "0032",
+      "slug": "moldura-com-coroamento",
+      "nome": "Moldura com coroamento",
+      "categoria": "utilitaria",
+      "descricao": "Moldura vazada com crista de folhagem acima do quadro",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "parede"
+      ],
+      "capa": {
+        "src": "/acervo/0032-moldura-com-coroamento/capa-1200.webp",
+        "srcsetWebp": "/acervo/0032-moldura-com-coroamento/capa-600.webp 600w, /acervo/0032-moldura-com-coroamento/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0032-moldura-com-coroamento/capa-600.avif 600w, /acervo/0032-moldura-com-coroamento/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JQBOgBDvWr36FjB67NZfgAP7qb2Y8BJazv2KeFXC3VHmGQQQHZjIPyldoglShjlDpT5krHcRDEztkWz1AAA==",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0032-moldura-com-coroamento/01-2000.webp",
+          "srcsetWebp": "/acervo/0032-moldura-com-coroamento/01-640.webp 640w, /acervo/0032-moldura-com-coroamento/01-1280.webp 1280w, /acervo/0032-moldura-com-coroamento/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0032-moldura-com-coroamento/01-640.avif 640w, /acervo/0032-moldura-com-coroamento/01-1280.avif 1280w, /acervo/0032-moldura-com-coroamento/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0033-aguia-sobre-a-esfera",
+      "numero": "0033",
+      "slug": "aguia-sobre-a-esfera",
+      "nome": "Águia sobre a esfera",
+      "categoria": "fauna",
+      "descricao": "Asas erguidas, pousada sobre uma esfera entalhada",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0033-aguia-sobre-a-esfera/capa-1200.webp",
+        "srcsetWebp": "/acervo/0033-aguia-sobre-a-esfera/capa-600.webp 600w, /acervo/0033-aguia-sobre-a-esfera/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0033-aguia-sobre-a-esfera/capa-600.avif 600w, /acervo/0033-aguia-sobre-a-esfera/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JYwCw7CG8ETkhqU+XdAAA/up7kyEsOBgUcHNFQ+hx/e1hQsrG3juV7IvbspwZ1KbUmltethkyAhc5S1T1voZAKTJMIp6gPgA=",
+        "cor": "#e8d8d8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0033-aguia-sobre-a-esfera/01-2000.webp",
+          "srcsetWebp": "/acervo/0033-aguia-sobre-a-esfera/01-640.webp 640w, /acervo/0033-aguia-sobre-a-esfera/01-1280.webp 1280w, /acervo/0033-aguia-sobre-a-esfera/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0033-aguia-sobre-a-esfera/01-640.avif 640w, /acervo/0033-aguia-sobre-a-esfera/01-1280.avif 1280w, /acervo/0033-aguia-sobre-a-esfera/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    },
+    {
+      "id": "0034-aguia-sobre-o-bloco",
+      "numero": "0034",
+      "slug": "aguia-sobre-o-bloco",
+      "nome": "Águia sobre o bloco",
+      "categoria": "fauna",
+      "descricao": "Asas erguidas sobre um bloco retangular de madeira",
+      "preco": {
+        "modo": "consulta",
+        "valor": null
+      },
+      "situacao": "a-venda",
+      "aceitaEncomenda": true,
+      "destaque": false,
+      "colecoes": [
+        "mesa-e-estante"
+      ],
+      "capa": {
+        "src": "/acervo/0034-aguia-sobre-o-bloco/capa-1200.webp",
+        "srcsetWebp": "/acervo/0034-aguia-sobre-o-bloco/capa-600.webp 600w, /acervo/0034-aguia-sobre-o-bloco/capa-1200.webp 1200w",
+        "srcsetAvif": "/acervo/0034-aguia-sobre-o-bloco/capa-600.avif 600w, /acervo/0034-aguia-sobre-o-bloco/capa-1200.avif 1200w",
+        "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JQBOgA6fQwgOcWAe6ejAA/u1hEd8GijRpBAdoqC8YR4VEa57XC6aCqmiqqQg7/XsWx+e4A/0BAk3Nvj21DincRFozY3vdZKam6wSA+Iwq039AAAA=",
+        "cor": "#f8e8e8"
+      },
+      "fotos": [
+        {
+          "src": "/acervo/0034-aguia-sobre-o-bloco/01-2000.webp",
+          "srcsetWebp": "/acervo/0034-aguia-sobre-o-bloco/01-640.webp 640w, /acervo/0034-aguia-sobre-o-bloco/01-1280.webp 1280w, /acervo/0034-aguia-sobre-o-bloco/01-2000.webp 2000w",
+          "srcsetAvif": "/acervo/0034-aguia-sobre-o-bloco/01-640.avif 640w, /acervo/0034-aguia-sobre-o-bloco/01-1280.avif 1280w, /acervo/0034-aguia-sobre-o-bloco/01-2000.avif 2000w",
+          "largura": 2048,
+          "altura": 2048
+        }
+      ],
+      "origemFotos": "nova"
+    }
+  ]
+}

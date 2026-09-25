@@ -21,10 +21,10 @@ export default function SecaoBancada() {
         <Revelar>
           <div className="flex flex-col items-center text-center">
             <span className="eyebrow block">Na bancada</span>
-            <h2 className="mt-4 texto-display-sm uppercase">De perto, e em movimento</h2>
+            <h2 className="mt-4 texto-display-sm">Veja o Carlos trabalhando</h2>
             <span className="filete mt-7" />
             <p className="mt-7 max-w-md text-tinta/70">
-              Goiva, malho e madeira maciça. Sem máquina de cópia, sem atalho.
+              Formão, malho e madeira maciça, do jeito que ele aprendeu.
             </p>
           </div>
         </Revelar>
@@ -40,7 +40,7 @@ export default function SecaoBancada() {
                 className="w-[74%] shrink-0 snap-center md:w-auto"
               >
                 <VideoVertical src={video.src} poster={video.poster} alt={video.alt} />
-                <p className="mt-4 font-display text-h6 uppercase tracking-largo">{video.titulo}</p>
+                <p className="mt-4 rotulo">{video.titulo}</p>
               </Revelar>
             ))}
           </ul>

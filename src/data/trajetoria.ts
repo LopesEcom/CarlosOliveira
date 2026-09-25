@@ -7,40 +7,59 @@ export interface EtapaTrajetoria {
 }
 
 /**
- * A trajetória do Carlos, na ordem em que aconteceu.
+ * A trajetória do Carlos, na ordem em que ele conta.
  *
- * TODO: faltam os anos. O Carlos contou os lugares e o tempo de São Paulo
- * (vinte anos no Bexiga), mas não as datas — e datar por conta seria inventar.
- * Assim que ele disser, entra um campo `periodo` em cada etapa e a seção passa
- * a mostrar a linha do tempo com os anos.
+ * Fonte: a introdução do livro dele, "O Silêncio da Madeira e o Grito da
+ * Vida" (foto em imagens Carlos/livro-introducao.jpg), mais o que ele já
+ * tinha dito: vinte anos em São Paulo e a loja em Cabo Frio.
+ *
+ * "Bixiga" com i, como ele escreve.
+ *
+ * TODO: a introdução não diz em que ordem vieram as feiras de Niterói e a
+ * reforma do castelo em relação a Cabo Frio. A ordem abaixo é a do texto
+ * dele; vale confirmar. Anos também ajudariam, e nenhum foi inventado.
  */
 export const trajetoria: EtapaTrajetoria[] = [
+  {
+    id: 'infancia',
+    lugar: 'Pavuna e Além Paraíba',
+    titulo: 'O caçula do tupieiro',
+    texto:
+      'Nasceu na Pavuna e correu descalço no chão de terra batida de Além Paraíba. Do pai, tupieiro, herdou o talento que parecia impossível.',
+  },
   {
     id: 'petropolis',
     lugar: 'Petrópolis, RJ',
     titulo: 'Onde aprendeu',
     texto:
-      'Foi em Petrópolis que o Carlos aprendeu a entalhar — a segurar a goiva, a ler o veio da madeira e a descobrir que cada bloco só aceita ser aberto de um jeito.',
+      'Chorou de saudade no degrau de uma calçada em Petrópolis, e foi lá que aprendeu o ofício que nunca mais largou.',
   },
   {
-    id: 'bexiga',
-    lugar: 'Bela Vista, São Paulo',
-    titulo: 'Vinte anos no Bexiga',
+    id: 'bixiga',
+    lugar: 'Bixiga, São Paulo',
+    titulo: 'Mestre entalhador aos 21',
     texto:
-      'Duas décadas trabalhando no bairro do Bexiga, na Bela Vista. Foi ali que o ofício virou rotina de todo dia e que a mão ganhou a segurança que aparece nas peças de hoje.',
+      'Consagrado Mestre Entalhador no Bixiga aos 21 anos, passou vinte anos trabalhando em São Paulo.',
+  },
+  {
+    id: 'rio',
+    lugar: 'Rio e Niterói',
+    titulo: 'A estrada',
+    texto:
+      'Muita estrada num velho Gordini, madrugadas nas feiras de Niterói e a reforma de um castelo no Rio de Janeiro.',
   },
   {
     id: 'cabo-frio',
-    lugar: 'Cabo Frio, RJ',
-    titulo: 'A loja',
+    lugar: 'Cabo Frio, Região dos Lagos',
+    titulo: 'A bailarina',
     texto:
-      'Em Cabo Frio teve loja própria, com as peças expostas para quem entrava. Do balcão para a bancada e da bancada para o balcão, sem intermediário entre quem fez e quem leva.',
+      'Teve loja própria em Cabo Frio. Lá, uma bailarina de madeira dele ganhou do Sebrae o prêmio de melhor peça da Região dos Lagos. Hoje ela é, para ele, o maior símbolo da própria resiliência.',
   },
   {
     id: 'hoje',
     lugar: 'Hoje',
     titulo: 'Mais de 300 peças',
     texto:
-      'O acervo passa de trezentas peças prontas, entre imagens sacras, fauna, figuras, relógios e molduras. Todas entalhadas à mão, uma a uma, e todas disponíveis.',
+      'Aos 72 anos, são mais de trezentas peças. E, como ele mesmo diz: enquanto houver madeira e fôlego, o formão nunca irá parar.',
   },
 ]

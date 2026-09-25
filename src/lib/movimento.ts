@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
 
 /**
  * MOVIMENTO, as fundações do editorial.
@@ -36,7 +36,32 @@ export function movimentoReduzido(): boolean {
   if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
     return false
   }
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  return window.matchMedia(CONSULTA_MOVIMENTO).matches
+}
+
+const CONSULTA_MOVIMENTO = '(prefers-reduced-motion: reduce)'
+
+/**
+ * A mesma pergunta, mas como hook, para decidir O QUE montar.
+ *
+ * Existe por causa da pré-renderização. O HTML de cada página sai do build,
+ * onde não há janela nem preferência de sistema, e o React exige que a
+ * primeira renderização no navegador bata com aquele HTML. Chamar
+ * `movimentoReduzido()` direto no render dava `false` no build e `true` no
+ * celular de quem pediu menos movimento: HTML diferente, hidratação quebrada.
+ *
+ * O `useSyncExternalStore` resolve exatamente isso: na hidratação ele usa o
+ * valor do servidor (`false`) e logo em seguida troca pelo de verdade.
+ */
+export function useMovimentoReduzido(): boolean {
+  return useSyncExternalStore(assinarMovimento, movimentoReduzido, () => false)
+}
+
+function assinarMovimento(avisar: () => void) {
+  if (typeof window.matchMedia !== 'function') return () => {}
+  const consulta = window.matchMedia(CONSULTA_MOVIMENTO)
+  consulta.addEventListener('change', avisar)
+  return () => consulta.removeEventListener('change', avisar)
 }
 
 /**
@@ -76,10 +101,22 @@ export function useRevelar<T extends HTMLElement = HTMLDivElement>({
   margem = '0px 0px -10% 0px',
 }: OpcoesRevelar = {}) {
   const alvo = useRef<T>(null)
-  const [visivel, setVisivel] = useState(comecaRevelado)
+  /*
+    Nasce `false` SEMPRE, e a exceção (sem observador, menos movimento) é
+    decidida no efeito. Decidir aqui no estado inicial daria `true` no build,
+    onde não há janela, e `false` no navegador: o HTML pré-renderizado e a
+    primeira renderização discordariam, e o React não corrige classe em
+    hidratação. O texto não fica escondido por isso: sem JavaScript a classe
+    `js` não existe no <html> e o CSS não esconde nada (ver index.css).
+  */
+  const [visivel, setVisivel] = useState(false)
 
   useEffect(() => {
     if (visivel) return
+    if (comecaRevelado()) {
+      setVisivel(true)
+      return
+    }
     const elemento = alvo.current
     if (!elemento) return
 
@@ -179,19 +216,24 @@ export function useParallax<T extends HTMLElement = HTMLDivElement>(intensidade 
  * navegador baixaria as fotos das duas.
  */
 export function useTelaLarga(minimo = 1024): boolean {
-  const [larga, setLarga] = useState(
-    () => typeof window !== 'undefined' && window.innerWidth >= minimo,
+  const consulta = `(min-width: ${minimo}px)`
+
+  const assinar = useCallback(
+    (avisar: () => void) => {
+      const lista = window.matchMedia(consulta)
+      lista.addEventListener('change', avisar)
+      return () => lista.removeEventListener('change', avisar)
+    },
+    [consulta],
   )
 
-  useEffect(() => {
-    const consulta = window.matchMedia(`(min-width: ${minimo}px)`)
-    const atualizar = () => setLarga(consulta.matches)
-    atualizar()
-    consulta.addEventListener('change', atualizar)
-    return () => consulta.removeEventListener('change', atualizar)
-  }, [minimo])
-
-  return larga
+  /* No build não há tela: `false`, e o navegador corrige logo depois da
+     hidratação. Mesmo motivo do `useMovimentoReduzido`. */
+  return useSyncExternalStore(
+    assinar,
+    () => window.matchMedia(consulta).matches,
+    () => false,
+  )
 }
 
 /**

@@ -1,3 +1,5 @@
+'use client'
+
 import { Minus, Plus } from 'lucide-react'
 import { useState } from 'react'
 
@@ -19,7 +21,7 @@ export default function Faq() {
         <div className="col-4">
           <Revelar>
             <span className="eyebrow block">Dúvidas</span>
-            <h2 className="mt-4 texto-display-sm uppercase">Antes de perguntar</h2>
+            <h2 className="mt-4 texto-display-sm">O que costumam perguntar</h2>
             <span className="filete mt-7" />
           </Revelar>
         </div>
@@ -46,7 +48,7 @@ function ItemFaq({ pergunta, resposta }: { pergunta: string; resposta: string })
       className="group"
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 [&::-webkit-details-marker]:hidden">
-        <h3 className="font-display text-h5 uppercase tracking-largo transition-colors duration-300 ease-suave group-hover:text-cinza">
+        <h3 className="font-display text-h5 transition-colors duration-300 ease-suave group-hover:text-cinza">
           {pergunta}
         </h3>
         <span aria-hidden className="shrink-0 text-tinta">

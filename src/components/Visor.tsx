@@ -1,3 +1,5 @@
+'use client'
+
 import { ChevronLeft, ChevronRight, X, ZoomIn, ZoomOut } from 'lucide-react'
 import {
   useCallback,
@@ -175,7 +177,7 @@ export default function Visor({ imagens, indiceInicial, nome, aoFechar, acao }: 
     >
       {/* Topo: contagem e fechar */}
       <div className="flex shrink-0 items-center justify-between p-4 text-creme/80 sm:p-5">
-        <span className="font-display text-h6 uppercase tracking-largo">
+        <span className="rotulo">
           {nome}
           {varias && (
             <span className="ml-3 text-creme/50">

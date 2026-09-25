@@ -9,7 +9,17 @@ lerna-debug.log*
 
 node_modules
 dist
-dist-ssr
+
+# Next.js
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# Chaves do Supabase. O modelo, sem segredo, é o .env.example.
+.env*.local
+!.env.example
+.env
 *.local
 
 # Editor directories and files
@@ -31,3 +41,10 @@ dist-ssr
 # versões otimizadas em public/obras, public/atelier e public/videos.
 # Continuam no disco, apenas fora do repositório.
 imagens Carlos/
+
+# Fotos cruas do acervo (originais do celular, pesados). O site usa o que o
+# `npm run fotos` gera em public/acervo/; os originais ficam só no disco.
+fotos/entrada/
+
+# HTML intermediário do guia de fotos; o que importa é fotos/guia/saida/.
+fotos/guia/.html/

@@ -17,24 +17,24 @@ export const perguntas: Pergunta[] = [
     id: 'pecas-prontas',
     pergunta: 'As peças do site estão à venda?',
     resposta:
-      'Sim. Tudo que está no acervo é peça pronta, entalhada e acabada. O site mostra uma parte: são mais de trezentas peças no total, então, se você procura um tema que não está aqui, vale perguntar — pode ser que já exista.',
+      'Sim. Tudo que está no acervo é peça pronta, entalhada e acabada. O site mostra só uma parte das mais de trezentas. Se você procura um tema que não está aqui, pergunte, porque pode ser que já exista.',
   },
   {
     id: 'encomenda',
     pergunta: 'Faz peça sob encomenda?',
     resposta:
-      'Faz. Uma imagem sacra específica, um painel do tamanho da sua parede, um relógio ou uma moldura com um desenho seu. Mande a referência e as medidas do lugar onde a peça vai ficar que o Carlos diz o que é possível e quanto tempo leva.',
+      'Faz, sim. Uma imagem sacra, um painel do tamanho da sua parede, um relógio ou uma moldura com o desenho que você quiser. Mande a referência e as medidas do lugar onde a peça vai ficar, e o Carlos te diz o que dá para fazer e quanto tempo leva.',
   },
   {
     id: 'entalhe',
     pergunta: 'Como cada peça é feita?',
     resposta:
-      'À mão, à goiva, a partir de um bloco maciço — nada de molde, resina ou peça colada. Por isso não existem duas iguais: mesmo repetindo o tema, a madeira seguinte tem outro veio e pede outra solução.',
+      'À mão, no formão, a partir de um bloco maciço. Nada de molde, resina ou peça colada. Por isso não existem duas iguais: mesmo quando o tema se repete, cada madeira tem um veio e pede outra solução.',
   },
   {
     id: 'livro',
     pergunta: 'Como consigo o livro e o manual de entalhes?',
     resposta:
-      'O livro é a autobiografia do Carlos, e traz no fim um manual de entalhes para quem quiser aprender o ofício. Chame no WhatsApp que ele explica como conseguir o seu exemplar.',
+      'O livro conta a vida do Carlos e traz, no fim, um manual de entalhe para quem quiser aprender. Chame ele no WhatsApp que ele te explica como conseguir o seu.',
   },
 ]

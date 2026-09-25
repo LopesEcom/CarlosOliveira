@@ -1,6 +1,9 @@
+'use client'
+
 import type { ReactNode } from 'react'
 
 import { linkWhatsApp } from '../lib/brand'
+import { useConfiguracoes } from '../lib/contato'
 import { cn } from '../lib/utils'
 import { IconeWhatsapp } from './icones'
 
@@ -21,6 +24,9 @@ interface BotaoWhatsappProps {
 /**
  * Único caminho de contato do site. Abre o WhatsApp em nova aba com a
  * mensagem já escrita — a cliente só precisa apertar enviar.
+ *
+ * O número é o das Configurações do painel, entregue pelo layout do site
+ * (ver lib/contato.ts).
  */
 export default function BotaoWhatsapp({
   mensagem,
@@ -29,9 +35,11 @@ export default function BotaoWhatsapp({
   tamanho = 'padrao',
   className,
 }: BotaoWhatsappProps) {
+  const { contato } = useConfiguracoes()
+
   return (
     <a
-      href={linkWhatsApp(mensagem)}
+      href={linkWhatsApp(contato.whatsapp, mensagem)}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
