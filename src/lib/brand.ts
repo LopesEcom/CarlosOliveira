@@ -13,15 +13,32 @@ export const brand = {
   subtitulo: 'Escultor entalhador',
 
   /**
-   * Autobiografia do Carlos. O título completo é longo demais para caber num
-   * botão, então fica separado do nome curto que aparece na navegação.
+   * O material do Carlos que o site oferece: a apostila da Escola Oficina
+   * Arte Pira, com o método de entalhe dele. Tiragem livre e gratuita, lida
+   * num link de fora (publicado no Meta AI). É o que a página /livro e o
+   * "Aprender a fazer" das peças abrem.
+   *
+   * Os dados vêm da capa (public/livro/arte-pira.webp): o site não conhece o
+   * conteúdo de dentro.
    */
   livro: {
-    titulo: 'Arterapia',
-    subtitulo: 'Minha história, minha arte, minha missão',
+    titulo: 'Arte Pira',
+    subtitulo: 'Apostila e Dossiê do Mestre Carlos Oliveira',
+    escola: 'Escola Oficina',
+    link: 'https://www.meta.ai/share/a/8382834c-4d0f-49ba-9ca4-d7cdffc6936e',
     get completo() {
       return `${this.titulo}: ${this.subtitulo}`
     },
+  },
+
+  /**
+   * A autobiografia do Carlos. Não é oferecida no site; fica aqui porque as
+   * falas da página História são da introdução dela, e a citação precisa
+   * dizer de onde veio.
+   */
+  autobiografia: {
+    titulo: 'Arterapia',
+    subtitulo: 'Minha história, minha arte, minha missão',
   },
 
   /**

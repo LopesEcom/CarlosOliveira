@@ -1,3 +1,4 @@
+import { brand } from './brand'
 import type { Peca } from './tipos'
 
 /**
@@ -16,12 +17,11 @@ export function caminhoPeca(peca: Pick<Peca, 'slug'>): string {
 /**
  * Para onde vai o "Aprender a fazer" da página de cada peça.
  *
- * Hoje é a apostila da Escola Oficina Arte Pira, com o método do Carlos,
- * publicada no Meta AI (endereço de fora, abre em outra aba). Quando a
- * landing do livro existir aqui no site, é só trocar por `/livro` (ou o
- * caminho novo): todas as peças passam a apontar para ela.
+ * A apostila da Escola Oficina Arte Pira, com o método do Carlos (endereço
+ * de fora, abre em outra aba). O link mora em `brand.livro.link`: se a
+ * apostila mudar de endereço, é lá que troca, e as peças acompanham.
  */
-export const CAMINHO_APRENDER = 'https://www.meta.ai/share/a/8382834c-4d0f-49ba-9ca4-d7cdffc6936e'
+export const CAMINHO_APRENDER = brand.livro.link
 
 /** Endereço de fora do site: abre em outra aba, sem o `<Link>` do Next. */
 export function ehExterno(caminho: string): boolean {

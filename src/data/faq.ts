@@ -33,8 +33,8 @@ export const perguntas: Pergunta[] = [
   },
   {
     id: 'livro',
-    pergunta: 'Como consigo o livro e o manual de entalhes?',
+    pergunta: 'Como leio a apostila do Carlos?',
     resposta:
-      'O livro conta a vida do Carlos e traz, no fim, um manual de entalhe para quem quiser aprender. Chame ele no WhatsApp que ele te explica como conseguir o seu.',
+      'A apostila Arte Pira reúne o método de entalhe do Carlos, o dos mestres espanhóis de Petrópolis. A tiragem é livre e gratuita: abra pela página do livro, aqui no site.',
   },
 ]

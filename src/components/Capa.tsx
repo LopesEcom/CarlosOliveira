@@ -66,7 +66,7 @@ export default function Capa() {
         <div className="container-site">
           <div className="max-w-[34rem]">
             <Revelar atraso={140} naPrimeiraTela>
-              <p className="rotulo text-creme rebaixado">Mestre entalhador</p>
+              <p className="rotulo text-creme rebaixado">Mestre entalhador · 58 anos de bancada</p>
               {/* Palavras dele, da introdução do livro. */}
               <p className="mt-5 font-display text-h2 font-normal leading-tight text-creme">
                 Uma vida inteira dedicada a transformar o bruto em belo

@@ -66,7 +66,7 @@ const pessoa = {
   '@id': `${SITE_URL}/#carlos`,
   name: brand.nome,
   jobTitle: brand.subtitulo,
-  description: 'Escultor entalhador. Mais de 300 peças entalhadas à mão em madeira maciça.',
+  description: 'Escultor entalhador, 58 anos de bancada. Milhares de peças pelo Brasil e pelo mundo; mais de 300 no ateliê, entalhadas à mão em madeira maciça.',
   url: SITE_URL,
   image: `${SITE_URL}/og-image.jpg`,
   knowsAbout: ['Entalhe em madeira', 'Escultura em madeira', 'Arte sacra'],

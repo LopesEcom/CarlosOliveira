@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { videoOficina } from '../data/bancada'
@@ -9,9 +10,9 @@ import VideoVertical from './VideoVertical'
  * introdução do livro dele e do que ele contou.
  */
 const NUMEROS = [
-  { valor: '300+', rotulo: 'peças no acervo' },
-  { valor: '21', rotulo: 'anos, quando virou Mestre Entalhador' },
-  { valor: '72', rotulo: 'anos, e o formão não parou' },
+  { valor: '58', rotulo: 'anos de bancada' },
+  { valor: '300+', rotulo: 'peças no ateliê hoje' },
+  { valor: '13', rotulo: 'anos, quando começou a entalhar' },
 ]
 
 /**
@@ -54,11 +55,11 @@ export default function SecaoOficina({ comLinkHistoria = false }: { comLinkHisto
 
             <Revelar atraso={160}>
               <p className="mt-8 max-w-lg text-tinta/75">
-                O Carlos é o caçula de um tupieiro. Aprendeu o ofício em Petrópolis e
-                passou vinte anos trabalhando em São Paulo. Depois vieram as feiras de
-                Niterói, a reforma de um castelo no Rio e a loja em Cabo Frio. Hoje são
-                mais de trezentas peças: arte sacra, bichos, figuras, relógios e
-                molduras, todas tiradas da madeira maciça.
+                O Carlos entalha desde os 13 anos. É o caçula de um tupieiro, aprendeu
+                o ofício em Petrópolis e passou vinte anos em São Paulo, em duas firmas
+                de entalhe: a Rusalém, na Bela Vista, e a Arte Ziggo, uma casa famosa
+                onde não entrava qualquer um. Depois vieram as feiras de Niterói, a
+                reforma de um castelo no Rio e a loja em Cabo Frio.
               </p>
             </Revelar>
 
@@ -78,16 +79,37 @@ export default function SecaoOficina({ comLinkHistoria = false }: { comLinkHisto
               ))}
             </dl>
 
+            {/* Pedido do Carlos: quem vê "300 peças" pensa que é tudo o que ele
+                fez. As trezentas são as do ateliê hoje; a carreira foram
+                milhares, quase todas por encomenda, e muitas foram para fora. */}
+            <Revelar atraso={480}>
+              <p className="mt-8 font-display text-h4 leading-snug">
+                Mais de trezentas no ateliê, e milhares de peças espalhadas pelo
+                Brasil e pelo mundo.
+              </p>
+            </Revelar>
+
             {/* O prêmio ganha linha própria: é o único reconhecimento de fora
                 que a página tem, e é o que ele chama de símbolo da resiliência. */}
-            <Revelar atraso={500}>
-              <p className="mt-10 border-l-2 border-tinta pl-5 text-sm leading-relaxed text-tinta/75">
-                <span className="block rotulo text-tinta">
-                  Prêmio Sebrae
-                </span>
-                Uma bailarina de madeira entalhada por ele foi premiada como a
-                melhor da Região dos Lagos.
-              </p>
+            <Revelar atraso={560}>
+              {/* Com a foto da peça, pedido do Carlos: o prêmio é dela, e ver a
+                  bailarina diz mais que o nome dela. */}
+              <figure className="mt-10 flex items-center gap-5 border-l-2 border-tinta pl-5">
+                <div className="relative aspect-square w-28 shrink-0 overflow-hidden bg-borda-sutil sm:w-36">
+                  <Image
+                    src="/atelier/bailarina.webp"
+                    alt="Bailarina de madeira entalhada por Carlos Oliveira, a peça que ganhou o primeiro prêmio do Sebrae na Região dos Lagos."
+                    fill
+                    sizes="(min-width: 640px) 144px, 112px"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="text-sm leading-relaxed text-tinta/75">
+                  <span className="block rotulo text-tinta">Prêmio Sebrae</span>
+                  Esta bailarina de madeira, entalhada por ele, ganhou o primeiro
+                  prêmio do Sebrae na Região dos Lagos, em Cabo Frio.
+                </figcaption>
+              </figure>
             </Revelar>
           </div>
         </div>

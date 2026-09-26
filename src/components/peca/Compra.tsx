@@ -30,7 +30,7 @@ type Opcao = 'levar' | 'aprender'
  *   LEVAR      abre o WhatsApp com a mensagem pronta, com o número e o link
  *              da peça. Peça vendida ou reservada vira "uma parecida, sob
  *              encomenda", quando o Carlos aceita.
- *   APRENDER   leva ao livro do Carlos, que tem o manual de entalhes no fim.
+ *   APRENDER   abre a apostila Arte Pira, com o método do Carlos.
  *              Hoje é a apostila dele (fora do site); quando a landing do livro existir, é
  *              só trocar CAMINHO_APRENDER em lib/rotas.ts.
  *
@@ -105,12 +105,12 @@ export default function Compra({ peca }: { peca: Peca }) {
             atual={levarDisponivel ? opcao : 'aprender'}
             aoEscolher={setOpcao}
             titulo="Aprender a fazer"
-            detalhe="O livro do Carlos, com o manual de entalhes no fim."
+            detalhe="A apostila Arte Pira, com o método do Carlos."
             lado={<BookOpen size={22} strokeWidth={1.25} aria-hidden className="text-tinta/70" />}
           >
             <p className="text-sm text-tinta/70">
-              A história de como ele chegou a peças como esta e, no fim, um manual de entalhes escrito para
-              quem quiser aprender o ofício.
+              O entalhe clássico que ele aprendeu com os mestres espanhóis de Petrópolis, reunido numa
+              apostila de tiragem livre e gratuita.
             </p>
           </CartaoOpcao>
         </div>
@@ -136,7 +136,7 @@ export default function Compra({ peca }: { peca: Peca }) {
             className="btn-primario w-full"
           >
             <BookOpen size={17} strokeWidth={1.5} aria-hidden />
-            Conhecer o livro
+            Abrir a apostila
           </Link>
         )}
 

@@ -42,8 +42,7 @@ export default function Historia() {
         <p>
           O Carlos é o caçula de um tupieiro. Nasceu na Pavuna, cresceu em Além
           Paraíba, aprendeu o ofício em Petrópolis e virou Mestre Entalhador no
-          Bixiga aos 21 anos. Aqui vai um pouco dessa história, contada por ele no
-          livro.
+          Bixiga aos 21 anos. Aqui vai um pouco dessa história, contada por ele.
         </p>
       </CabecalhoPagina>
 
@@ -63,7 +62,7 @@ export default function Historia() {
                 <span className="filete-claro" />
                 <blockquote className="t-italico-g mt-7 text-creme">“{fala}”</blockquote>
                 <figcaption className="mt-6 rotulo text-creme rebaixado">
-                  {brand.nome}, na introdução de {brand.livro.titulo}
+                  {brand.nome}, na introdução de {brand.autobiografia.titulo}
                 </figcaption>
               </Revelar>
             ))}
@@ -78,11 +77,11 @@ export default function Historia() {
           <Revelar>
             <p className="t-italico-g mx-auto max-w-[22ch]">{FRASE_DA_CASA}</p>
             <p className="mx-auto mt-8 max-w-md text-tinta/70">
-              A história completa está no livro, {brand.livro.titulo}, que ainda traz, no fim, um manual de entalhe.
+              O jeito como ele entalha está na apostila {brand.livro.titulo}, de tiragem livre e gratuita.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <Link href="/livro" className="btn-primario">
-                Conhecer o livro
+                Conhecer a apostila
               </Link>
               <Link href="/acervo" className="btn-contorno">
                 Ver as peças

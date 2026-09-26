@@ -22,12 +22,14 @@ Fonte: o próprio Carlos e a introdução do livro dele (foto em
 `imagens Carlos/livro-introducao.jpg`). **Não invente além disto.**
 
 - 72 anos. Caçula, nasceu na **Pavuna** e cresceu em **Além Paraíba**. O pai era **tupieiro**.
-- Aprendeu o ofício em **Petrópolis**.
-- Consagrado **Mestre Entalhador no Bixiga** (Bela Vista, São Paulo) **aos 21 anos**; trabalhou **20 anos em São Paulo**.
+- Entalha **desde os 13 anos**; **58 anos de bancada**. Aprendeu o ofício em **Petrópolis** (método dos mestres espanhóis).
+- Consagrado **Mestre Entalhador no Bixiga** (Bela Vista, São Paulo) **aos 21 anos**; trabalhou **20 anos em São Paulo**, em duas firmas: **Rusalém** (na Bela Vista) e **Arte Ziggo** ("firma famosa, não é qualquer um que entra"). Grafia dos dois nomes veio de áudio: a confirmar.
+- **Mais de 300 peças no ateliê hoje**, mas **milhares feitas ao longo da carreira**, espalhadas pelo Brasil e pelo exterior. Por décadas trabalhou por encomenda ("tinha que ganhar o leite das crianças"); o acervo atual ele montou depois de aposentado. **Pedido dele: o site não pode passar a ideia de que as 300 são tudo o que ele fez.**
 - Feiras em **Niterói** (a bordo de um velho Gordini) e a **reforma de um castelo no Rio de Janeiro**.
-- Teve **loja em Cabo Frio**. Uma **bailarina de madeira** dele foi premiada pelo **Sebrae** como a melhor da Região dos Lagos.
+- Teve **loja em Cabo Frio**. Uma **bailarina de madeira** dele ganhou o **primeiro prêmio do Sebrae** na Região dos Lagos, em Cabo Frio. A foto dela (`public/atelier/bailarina.webp`, tratada a partir de `imagens Carlos/peças/Gemini_Generated_Image_bz3eqx…`) aparece junto do prêmio, na seção da oficina.
 - Companheira: **Marina**. O entalhe foi, nas palavras dele, a sua cura ("esculpiu a minha própria cura").
-- Livro: **"Arterapia: Minha história, minha arte, minha missão"** (título da capa que o Carlos fez, `public/livro/capa.jpeg`; antes o site dizia "Artepira, por que foi uma terapia para mim"), autobiografia com um **manual de entalhes** no fim. A introdução se chama "O Silêncio da Madeira e o Grito da Vida".
+- Material oferecido no site (página `/livro`): a apostila **"Arte Pira: Apostila e Dossiê do Mestre Carlos Oliveira"**, da **Escola Oficina Arte Pira** (Além Paraíba, MG, 2025). Pela capa: 58 anos de profissão, entalhe clássico em extinção, método de ensino dos mestres espanhóis de Petrópolis, Volume 1, edição do mestre, tiragem livre e gratuita. Capa em `public/livro/arte-pira.webp`; o link fica em `brand.livro.link`.
+- Autobiografia: **"Arterapia: Minha história, minha arte, minha missão"**. Não é oferecida no site desde 25/09/2026 (o Edson trocou pela apostila); fica em `brand.autobiografia` só porque as falas da página História são da introdução dela, "O Silêncio da Madeira e o Grito da Vida".
 - Usa a palavra **formão** (não "goiva") para a ferramenta. Escreve **Bixiga** com i.
 
 ---
@@ -157,6 +159,8 @@ acervo/  fotos/  marca/  vendas/  public/   (como antes)
 
 ## Bloqueadores e pendências
 
+- **Pedidos do Carlos de 25/09/2026 que dependem de arquivo:** (1) ~~logo do genro~~: entrou o brasão Artepira (`marca/original/logo-artepira.png`); o arquivo veio pequeno pelo WhatsApp, vale pedir o original. O brasão diz **"desde 1966"** (60 anos) e o site diz **58 anos de bancada**: confirmar qual vale; (2) ~~foto da bailarina~~: entrou junto do prêmio, na seção da oficina. Grafia de **Rusalém** e **Arte Ziggo** a confirmar.
+
 **Não pode ir ao ar sem:**
 
 - **Número de WhatsApp real**: nas Configurações do painel (ou `brand.whatsapp`, o padrão, hoje `5500000000000`, inválido de propósito).
@@ -171,8 +175,8 @@ acervo/  fotos/  marca/  vendas/  public/   (como antes)
 - As peças **0033 Águia sobre a esfera** e **0034 Águia sobre o bloco** entraram pelas fotos novas, sem ficha: nome, situação, medidas e madeira a confirmar (nome provisório, descritivo).
 - As fotos novas de `imagens Carlos/peças/` são **tratadas por IA (Gemini)**: conferir com o Carlos se cada uma é fiel à peça (entalhe, cor, proporção) antes de divulgar. `0024 Figura de pé` e `0025 Figura com manto` parecem ser a mesma peça em dois ângulos.
 - Todas as peças têm foto nova. A 0018 Ave estilizada saiu do acervo a pedido do Edson.
-- A capa do livro diz **"Carlos Roberto, Mestre Escultor"**, e o site usa "Carlos Oliveira": confirmar qual nome ele assina.
-- O "Aprender a fazer" das peças abre a apostila **Escola Oficina Arte Pira** num link do Meta AI (`CAMINHO_APRENDER` em `src/lib/rotas.ts`). Link de terceiro, pode sair do ar: trocar pela landing do livro quando existir.
+- A capa do Arterapia dizia **"Carlos Roberto, Mestre Escultor"**; a apostila diz "Carlos Oliveira", o nome que o site usa. Vale confirmar com ele.
+- A apostila e o "Aprender a fazer" das peças abrem um link do Meta AI (`brand.livro.link`). Link de terceiro, pode sair do ar; o conteúdo de dentro não é legível pelo site, então a seção só descreve o que está na capa.
 - "Sem molde, sem resina, sem emenda" (texto da capa e da FAQ que nunca veio dele).
 - A ordem da trajetória e os anos.
 - O sumário real do manual de entalhes (a seção do livro usa tópicos genéricos).

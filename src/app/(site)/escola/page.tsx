@@ -64,9 +64,9 @@ export default function Escola() {
                     anos. Hoje o acervo dele passa de trezentas peças.
                   </p>
                   <p>
-                    No fim do livro dele, “{brand.livro.titulo}”, há um manual de
-                    entalhes, escrito para quem quiser aprender. A escola é o
-                    passo seguinte: o mesmo caminho, na bancada.
+                    O método dele, o dos mestres espanhóis de Petrópolis, está na
+                    apostila “{brand.livro.titulo}”, aberta a quem quiser ler. A
+                    escola é o passo seguinte: o mesmo caminho, na bancada.
                   </p>
                 </div>
               </Revelar>

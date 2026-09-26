@@ -11,7 +11,7 @@ import { getColecoes, getPecas } from '../../lib/dados/consultas'
 
 export const metadata = {
   description:
-    'Carlos Oliveira, escultor entalhador: mais de 300 peças entalhadas à mão em madeira maciça, entre arte sacra, bichos, figuras, relógios e molduras. Peças prontas e sob encomenda.',
+    'Carlos Oliveira, escultor entalhador com 58 anos de bancada e milhares de peças pelo Brasil e pelo mundo. Mais de 300 peças entalhadas à mão em madeira maciça, entre arte sacra, bichos, figuras, relógios e molduras. Peças prontas e sob encomenda.',
   alternates: { canonical: '/' },
 }
 
